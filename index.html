@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>めばえWeb制作｜ポートフォリオ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e7;--card:#fff;--ink:#2a2a26;--muted:#66625a;--green:#4a6e52;--green-soft:#e3ece2;--orange:#d9773a;--line:#e4dccd}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.85}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Zen Maru Gothic",sans-serif;line-height:1.45;margin:0;word-break:auto-phrase;text-wrap:balance}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+header{padding-block:56px 40px}
+.brand{display:flex;align-items:center;gap:14px}
+.mark{width:56px;height:56px;border-radius:50%;background:var(--green-soft);display:grid;place-items:center;flex:none}
+.brand b{font-family:"Zen Maru Gothic";font-size:26px;letter-spacing:.06em}
+.brand small{display:block;color:var(--muted);font-size:13px}
+header h1{font-size:clamp(26px,4vw,40px);margin-top:28px}
+header p{color:var(--muted);margin-top:14px;max-width:640px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chips span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:500}
+section{padding-block:36px}
+.sec-title{font-size:24px;display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.sec-title::before{content:"";width:6px;height:26px;background:var(--green);border-radius:3px}
+.works{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.work{background:var(--card);border-radius:18px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+.work .thumb{background:#efe9de;aspect-ratio:4/3;display:grid;place-items:center;overflow:hidden}
+.work .thumb img{width:100%;height:100%;object-fit:cover}
+.work .thumb.contain img{object-fit:contain}
+.work .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.work .kind{font-size:12px;font-weight:700;color:var(--green);letter-spacing:.06em}
+.work h3{font-size:19px}
+.work p{margin:0;font-size:14.5px;color:var(--muted)}
+.work .more{margin-top:auto;padding-top:8px}
+.work .more a{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;color:var(--orange);text-decoration:none}
+.banners{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:14px;align-items:start}
+.banners figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.banners figcaption{font-size:13px;color:var(--muted);padding:10px 14px}
+.service{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.svc h3{font-size:18px}
+.svc .price{font-family:"Zen Maru Gothic";font-weight:900;color:var(--orange);font-size:24px;margin-top:6px}
+.svc .price small{font-size:13px;color:var(--muted);font-weight:500}
+.svc p{margin:8px 0 0;font-size:14px;color:var(--muted)}
+.flow{counter-reset:s;display:grid;gap:10px}
+.flow li{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px 14px 58px;position:relative;font-size:15px}
+.flow li::before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.flow{padding:0;margin:0}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+footer{padding-block:40px 60px;color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:760px){
+  .works,.service{grid-template-columns:1fr}
+  .banners{grid-template-columns:1fr 1fr}
+  .banners figure:last-child{grid-column:1/-1}
+  header{padding-block:36px 20px}
+}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="brand">
+    <span class="mark"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="18" width="26" height="16" rx="4" fill="none" stroke="#4a6e52" stroke-width="3"/><circle cx="12" cy="22.5" r="1.4" fill="#4a6e52"/><circle cx="16" cy="22.5" r="1.4" fill="#4a6e52"/><path d="M20 18c0-5 3-9 9-10-1 6-4 9-9 10Z" fill="#4a6e52"/><path d="M20 18c0-4-2-7-7-8 0 5 3 8 7 8Z" fill="#4a6e52"/><path d="M33 9l1 2 2 1-2 1-1 2-1-2-2-1 2-1Z" fill="#d9773a"/></svg></span>
+    <span><b>めばえWeb制作</b><small>LP制作・バナー制作・業務自動化（GAS）</small></span>
+  </div>
+  <h1>小さなお店と事業の「集客」と「手間」を、<br>Webの力で軽くします。</h1>
+  <p>生成AIを制作工程に取り入れ、構成・文章・デザイン・実装までを一括でお引き受けします。写真素材がなくても、イメージ写真からご用意できます。AIの利用は事前にお伝えし、納品前にPC・スマホの表示や動作を確認します。</p>
+  <div class="chips"><span>スマホ対応LP</span><span>バナー・SNS画像</span><span>Googleフォーム×GAS</span><span>Excel・スプレッドシート</span><span>景品表示法・薬機法に配慮した表現</span></div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2 class="sec-title">ランディングページ</h2>
+    <div class="works">
+      <article class="work">
+        <div class="thumb contain"><img src="works/thumb-lp-v2.jpg" alt="整体院のランディングページ（PCとスマホの表示）" width="1200" height="1220" loading="lazy"></div>
+        <div class="body">
+          <span class="kind">LP制作｜構成・文章・デザイン・コーディング</span>
+          <h3>肩こり専門の整体院 集客LP</h3>
+          <p>初めての方の「症状を見てもらえる？」「いくらかかる？」「押し売りされない？」という不安を順に解消する構成。空き状況表、スマホ下部の固定予約ボタン、景品表示法に配慮した表現で制作しました。</p>
+          <div class="more"><a href="seitai-sample/" target="_blank" rel="noopener">実際のページを見る →</a></div>
+        </div>
+      </article>
+      <article class="work">
+        <div class="thumb"><img src="works/gas-card.jpg" alt="問い合わせ自動対応ツールの仕組み" width="1200" height="800" loading="lazy"></div>
+        <div class="body">
+          <span class="kind">業務自動化｜Google Apps Script</span>
+          <h3>問い合わせ自動対応ツール</h3>
+          <p>Googleフォームとスプレッドシートだけで動く、月額0円の問い合わせ管理。自動返信、担当者への通知、対応ステータス管理、毎朝の未対応一覧メールまで自動化。導入手順書付きです。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">バナー・SNS画像</h2>
+    <div class="banners">
+      <figure><img src="works/b1-seitai-insta.jpg" alt="整体院のInstagram投稿画像" width="1080" height="1080" loading="lazy"><figcaption>整体院｜Instagram投稿（1080×1080）</figcaption></figure>
+      <figure><img src="works/b3-cafe-insta.jpg" alt="カフェの秋限定メニュー告知画像" width="1080" height="1080" loading="lazy"><figcaption>カフェ｜季節メニュー告知（1080×1080）</figcaption></figure>
+      <figure><img src="works/b2-cosme-web.jpg" alt="美容液のWeb広告バナー" width="1200" height="628" loading="lazy"><figcaption>化粧品｜Web広告バナー（1200×628）。薬機法の範囲内の表現で作成</figcaption></figure>
+    </div>
+    <p class="note">※ 掲載作品はすべて架空の店舗・商品を想定した制作サンプルです。写真はAI生成のイメージです。</p>
+  </section>
+
+  <section>
+    <h2 class="sec-title">料金の目安</h2>
+    <div class="service">
+      <div class="svc"><h3>1ページLP制作</h3><div class="price">39,800円〜<small>（税込）</small></div><p>構成・文章・デザイン・スマホ対応・公開サポート。修正2回まで。</p></div>
+      <div class="svc"><h3>バナー・SNS画像</h3><div class="price">3,000円〜<small>／1点</small></div><p>サイズ違い展開・テキスト差し替えは割引でお受けします。</p></div>
+      <div class="svc"><h3>GAS・Excel自動化</h3><div class="price">8,000円〜</div><p>フォーム自動返信、集計、通知など。手順書付きで納品します。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">進め方</h2>
+    <ol class="flow">
+      <li>ご依頼内容を確認し、着手前に「成果物・やらないこと・納期・修正回数」をメッセージでお送りして合意します</li>
+      <li>不明点は着手前にまとめて1回でご質問します</li>
+      <li>構成案 → デザイン → 実装の順で、途中でも確認いただけます</li>
+      <li>納品前に、PC・スマホの表示、リンクやフォームの動作、誤字脱字をチェックリストで確認します</li>
+      <li>納品後7日間は、軽微な修正に無料で対応します</li>
+    </ol>
+  </section>
+</main>
+
+<footer class="wrap">© めばえWeb制作　ご相談はクラウドワークス／ランサーズのメッセージからお願いします。</footer>
+</body>
+</html>
