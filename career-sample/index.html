@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>20代の営業・販売職の転職相談｜キャリアのたね（制作サンプル）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Murecho:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* レイアウト：登録フォームを主役に。紺で信頼、ミントで前向きさ、黄色は登録ボタンだけ */
+:root{
+  --navy:#1d2e4a; --navy-2:#2b4168; --ink:#1f2633; --muted:#5d6676;
+  --mint:#3bb39a; --mint-soft:#e3f5f0; --sky:#eef4fb; --bg:#f7f9fc; --white:#fff;
+  --cta:#ffcf3f; --cta-deep:#f2b705; --line:#dde4ee;
+  --head:"Murecho","Noto Sans JP",sans-serif; --body:"Noto Sans JP","Hiragino Sans",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.85;font-size:16px}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);line-height:1.45;margin:0;word-break:auto-phrase;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.sec{padding-block:88px}
+.sec.sky{background:var(--sky)}
+.eyebrow{display:inline-block;font-family:var(--head);font-weight:700;color:var(--mint);font-size:14px;letter-spacing:.14em}
+.sec-title{font-size:clamp(24px,3.2vw,34px);margin-top:8px}
+.center{text-align:center}
+.note{font-size:12.5px;color:var(--muted);line-height:1.7}
+.btn-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--cta);color:var(--navy);font-weight:900;font-family:var(--head);text-decoration:none;border:none;border-radius:999px;padding:18px 34px;font-size:18px;cursor:pointer;box-shadow:0 6px 0 var(--cta-deep);transition:transform .15s,box-shadow .15s}
+.btn-cta:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--cta-deep)}
+.btn-cta small{font-size:13px;font-weight:700}
+
+.sample-bar{background:var(--navy);color:#dfe7f3;font-size:12px;text-align:center;padding:7px 12px}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font-family:var(--head);font-size:21px;color:var(--navy);letter-spacing:.04em}
+.logo small{display:block;font-size:11px;color:var(--muted);line-height:1.2}
+.hd .btn-cta{padding:10px 20px;font-size:14px;box-shadow:0 4px 0 var(--cta-deep)}
+
+/* FV */
+.fv{position:relative;background:linear-gradient(180deg,#fff 0%,var(--sky) 100%);overflow:hidden}
+.fv-img{position:absolute;right:0;top:0;bottom:0;width:58%;background:url(hero.jpg) 72% center/cover}
+.fv-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.6) 18%,rgba(255,255,255,0) 45%)}
+.fv-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-block:64px 72px}
+.fv-target{display:inline-flex;gap:8px;flex-wrap:wrap}
+.fv-target span{background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:4px 14px;border-radius:999px}
+.fv h1{font-size:clamp(30px,4.4vw,48px);font-weight:900;color:var(--navy);margin:20px 0 16px;letter-spacing:.02em}
+.fv h1 .hl{background:linear-gradient(transparent 62%,rgba(59,179,154,.35) 62%)}
+.fv-lead{color:var(--muted);max-width:480px}
+.fv-points{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.fv-points div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 14px;font-size:13px;line-height:1.35}
+.fv-points b{display:block;font-family:var(--head);font-size:20px;color:var(--navy)}
+.fv-points b span{font-size:13px}
+
+/* ステップフォーム */
+.form-card{background:#fff;border-radius:22px;box-shadow:0 24px 60px -30px rgba(29,46,74,.45);border:1px solid var(--line);padding:26px 26px 22px;position:relative;z-index:1;max-width:440px;justify-self:end;width:100%}
+.form-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.form-head b{font-family:var(--head);color:var(--navy);font-size:17px}
+.form-head small{color:var(--muted);font-size:12px}
+.progress{height:8px;background:var(--mint-soft);border-radius:99px;margin:12px 0 18px;overflow:hidden}
+.progress i{display:block;height:100%;width:0;background:var(--mint);border-radius:99px;transition:width .35s}
+.q{display:none}
+.q.on{display:block;animation:qin .3s ease}
+@keyframes qin{from{opacity:.4;transform:translateX(10px)}to{opacity:1;transform:none}}
+.q h3{font-size:19px;color:var(--navy);margin-bottom:14px}
+.opts{display:grid;gap:10px}
+.opts.two{grid-template-columns:1fr 1fr}
+.opt{display:block;border:2px solid var(--line);border-radius:12px;padding:13px 16px;font-weight:700;font-size:15px;cursor:pointer;background:#fff;text-align:left;font-family:var(--body);color:var(--ink);transition:border-color .15s,background .15s}
+.opt:hover,.opt:focus-visible{border-color:var(--mint);background:var(--mint-soft);outline:none}
+.field{display:grid;gap:6px;margin-bottom:12px}
+.field label{font-size:13px;font-weight:700}
+.field label em{font-style:normal;background:#e6526f;color:#fff;font-size:11px;padding:1px 6px;border-radius:4px;margin-left:6px}
+.field input{font:inherit;padding:12px 14px;border:2px solid var(--line);border-radius:10px;width:100%}
+.field input:focus{border-color:var(--mint);outline:none}
+.field .err{color:#c53d55;font-size:12px;min-height:1em}
+.form-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;gap:10px}
+.back{background:none;border:none;color:var(--muted);font:inherit;font-size:13px;cursor:pointer;padding:6px 0}
+.back[hidden]{display:none}
+.secure{display:flex;gap:8px;align-items:center;font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.5}
+.done{text-align:center;padding:12px 4px}
+.done h3{font-size:21px;color:var(--navy);margin:10px 0 8px}
+.done p{font-size:14px;color:var(--muted)}
+
+/* 共感 */
+.worries{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.worry{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;font-weight:700;position:relative;padding-top:42px}
+.worry::before{content:"“";position:absolute;top:2px;left:18px;font-family:var(--head);font-size:52px;color:var(--mint);line-height:1}
+.worry small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:6px}
+
+/* 強み */
+.strengths{display:grid;gap:56px;margin-top:44px}
+.st{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.st:nth-child(even) .st-img{order:2}
+.st-img{border-radius:20px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 20px 40px -26px rgba(29,46,74,.5)}
+.st-img img{width:100%;height:100%;object-fit:cover}
+.st-num{font-family:var(--head);font-weight:900;font-size:15px;color:#fff;background:var(--mint);display:inline-block;padding:2px 12px;border-radius:999px}
+.st h3{font-size:clamp(21px,2.5vw,26px);color:var(--navy);margin:12px 0 12px}
+.st p{color:var(--muted)}
+.st ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:6px}
+.st li{padding-left:24px;position:relative;font-size:15px}
+.st li::before{content:"";position:absolute;left:2px;top:8px;width:12px;height:7px;border-left:3px solid var(--mint);border-bottom:3px solid var(--mint);transform:rotate(-45deg)}
+.icon-card{background:#fff;border-radius:20px;border:1px solid var(--line);aspect-ratio:4/3;display:grid;place-items:center;padding:30px}
+
+/* 実績 */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.stat{background:#fff;border-radius:16px;padding:24px;text-align:center;border:1px solid var(--line)}
+.stat b{font-family:var(--head);font-size:44px;color:var(--navy);line-height:1.2;font-variant-numeric:tabular-nums}
+.stat b span{font-size:18px}
+.stat p{font-weight:700;margin-top:4px}
+
+/* 無料の理由 */
+.free{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:center;margin-top:36px;background:#fff;border-radius:22px;padding:36px;border:1px solid var(--line)}
+.diagram{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:8px;text-align:center;font-size:13px;font-weight:700}
+.diagram .node{background:var(--sky);border-radius:14px;padding:14px 6px;color:var(--navy)}
+.diagram .node.us{background:var(--navy);color:#fff}
+.diagram .arr{color:var(--mint);font-size:22px}
+.diagram .cap{grid-column:1/-1;font-weight:500;color:var(--muted);font-size:12.5px;margin-top:6px}
+
+/* 流れ */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px;counter-reset:f}
+.flow div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 18px}
+.flow div::before{counter-increment:f;content:"STEP " counter(f);font-family:var(--head);font-weight:900;color:var(--mint);font-size:13px;letter-spacing:.1em}
+.flow h3{font-size:17px;color:var(--navy);margin:6px 0}
+.flow p{font-size:14px;color:var(--muted);line-height:1.75}
+
+/* 声 */
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.voice{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.voice .who{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.voice .ava{width:46px;height:46px;border-radius:50%;background:var(--mint-soft);color:var(--mint);display:grid;place-items:center;font-weight:900;font-family:var(--head)}
+.voice .who b{display:block;font-size:14px}
+.voice .who small{font-size:12px;color:var(--muted)}
+.voice .move{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;background:var(--sky);border-radius:10px;padding:8px 10px;margin-bottom:10px;flex-wrap:wrap}
+.voice .move i{font-style:normal;color:var(--mint)}
+.voice p{font-size:14.5px}
+
+/* FAQ */
+.faq{max-width:780px;margin:36px auto 0;display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px}
+.faq summary{list-style:none;cursor:pointer;padding:16px 48px 16px 20px;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--mint)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 20px 18px;color:var(--muted);font-size:15px}
+
+/* 最後のCTA */
+.final{background:var(--navy);color:#fff;text-align:center;padding-block:80px}
+.final h2{font-size:clamp(24px,3.4vw,36px)}
+.final p{color:#c9d6ea;margin:14px auto 30px;max-width:560px}
+.company{background:#fff;border-top:1px solid var(--line);padding-block:40px 120px;font-size:13px;color:var(--muted)}
+.company dl{display:grid;grid-template-columns:160px 1fr;gap:6px 16px;margin:0 auto;max-width:720px}
+.company dt{font-weight:700;color:var(--ink)}
+.company dd{margin:0}
+
+.sp-cta{display:none}
+
+@media (max-width:900px){
+  .fv-grid{grid-template-columns:1fr;gap:26px;padding-block:0 48px}
+  .fv-img{position:relative;width:auto;height:52vw;min-height:200px;margin-inline:calc(-1 * max(20px,env(safe-area-inset-left,0px)))}
+  .fv-img::after{background:linear-gradient(0deg,#fff 0%,rgba(255,255,255,0) 40%)}
+  .fv{background:#fff}
+  .fv-copy{margin-top:-10px}
+  .form-card{justify-self:stretch;max-width:none}
+  .worries,.stats,.voices{grid-template-columns:1fr}
+  .st{grid-template-columns:1fr;gap:22px}
+  .st:nth-child(even) .st-img{order:0}
+  .free{grid-template-columns:1fr;padding:24px 20px}
+  .flow{grid-template-columns:1fr 1fr}
+  .company dl{grid-template-columns:1fr}
+  .sec{padding-block:64px}
+  .hd .btn-cta{display:none}
+  .sp-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(255,255,255,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+  .sp-cta.show{transform:none}
+  .sp-cta .btn-cta{width:100%;padding:15px;font-size:17px}
+}
+@media (max-width:420px){ .flow{grid-template-columns:1fr} .opts.two{grid-template-columns:1fr} }
+@media (prefers-reduced-motion:reduce){ .q.on{animation:none} html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+<div class="sample-bar">制作サンプル：架空の転職支援サービスを想定した登録LPです。写真はAI生成、数字・人物・会社情報はすべて架空で、フォームは送信されません。</div>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#top"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#1d2e4a"/><path d="M17 25v-9" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M17 17c0-4 3-7 7-7 0 4-3 7-7 7Z" fill="#3bb39a"/><path d="M17 19c0-3-2-5-5-5 0 3 2 5 5 5Z" fill="#ffcf3f"/></svg><span><small>20代の営業・販売職の転職相談</small><b>キャリアのたね</b></span></a>
+    <a class="btn-cta" href="#entry">無料で相談する</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="fv" id="entry">
+  <div class="fv-img" role="img" aria-label="キャリアアドバイザーと相談する様子"></div>
+  <div class="wrap fv-grid">
+    <div class="fv-copy">
+      <div class="fv-target"><span>20代</span><span>営業・販売・接客職</span><span>在職中でもOK</span></div>
+      <h1>「このままでいいのかな」を、<br><span class="hl">プロと一緒に整理</span>しよう。</h1>
+      <p class="fv-lead">今の経験を活かせる仕事、未経験から挑戦できる仕事を、専任アドバイザーが一緒に探します。相談から内定まで、ずっと無料です。</p>
+      <div class="fv-points">
+        <div><b>0<span>円</span></b>利用料はずっと無料</div>
+        <div><b>1<span>分</span></b>かんたん登録</div>
+        <div><b>LINE</b>で気軽に連絡OK</div>
+      </div>
+    </div>
+
+    <div class="form-card" aria-live="polite">
+      <div class="form-head"><b>無料キャリア相談に申し込む</b><small id="stepLabel">質問 1 / 5</small></div>
+      <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+      <form id="stepForm" novalidate>
+        <div class="q on" data-q="1">
+          <h3>今のお仕事の状況を教えてください</h3>
+          <div class="opts">
+            <button type="button" class="opt" data-v="在職中（営業・販売・接客）">在職中（営業・販売・接客）</button>
+            <button type="button" class="opt" data-v="在職中（その他の職種）">在職中（その他の職種）</button>
+            <button type="button" class="opt" data-v="離職中">離職中</button>
+          </div>
+        </div>
+        <div class="q" data-q="2">
+          <h3>転職したい時期は？</h3>
+          <div class="opts two">
+            <button type="button" class="opt" data-v="すぐにでも">すぐにでも</button>
+            <button type="button" class="opt" data-v="3か月以内">3か月以内</button>
+            <button type="button" class="opt" data-v="半年以内">半年以内</button>
+            <button type="button" class="opt" data-v="まずは情報収集">まずは情報収集</button>
+          </div>
+        </div>
+        <div class="q" data-q="3">
+          <h3>希望の勤務エリアは？</h3>
+          <div class="opts two">
+            <button type="button" class="opt" data-v="東京">東京</button>
+            <button type="button" class="opt" data-v="神奈川・千葉・埼玉">神奈川・千葉・埼玉</button>
+            <button type="button" class="opt" data-v="大阪・関西">大阪・関西</button>
+            <button type="button" class="opt" data-v="その他・未定">その他・未定</button>
+          </div>
+        </div>
+        <div class="q" data-q="4">
+          <h3>ご連絡のしかたを選んでください</h3>
+          <div class="opts">
+            <button type="button" class="opt" data-v="LINEで連絡がほしい">LINEで連絡がほしい</button>
+            <button type="button" class="opt" data-v="メールで連絡がほしい">メールで連絡がほしい</button>
+            <button type="button" class="opt" data-v="電話でもOK（平日夜・土日も可）">電話でもOK（平日夜・土日も可）</button>
+          </div>
+        </div>
+        <div class="q" data-q="5">
+          <h3>最後に、お名前とご連絡先</h3>
+          <div class="field"><label for="f-name">お名前<em>必須</em></label><input id="f-name" name="name" autocomplete="name" placeholder="例）山田 太郎"><span class="err" id="e-name"></span></div>
+          <div class="field"><label for="f-mail">メールアドレス<em>必須</em></label><input id="f-mail" name="email" type="email" autocomplete="email" inputmode="email" placeholder="例）taro@example.com"><span class="err" id="e-mail"></span></div>
+          <button type="submit" class="btn-cta" style="width:100%">同意して無料相談に申し込む</button>
+          <p class="note" style="margin-top:8px">「<a href="#privacy">個人情報の取り扱い</a>」に同意のうえお申し込みください。</p>
+        </div>
+        <div class="q" data-q="done">
+          <div class="done">
+            <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="#e3f5f0"/><path d="M17 29l7 7 15-16" fill="none" stroke="#3bb39a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>お申し込みありがとうございます</h3>
+            <p>担当アドバイザーから、ご希望の方法で2営業日以内にご連絡します。<br><b>※制作サンプルのため、実際には送信されていません。</b></p>
+          </div>
+        </div>
+        <div class="form-foot"><button type="button" class="back" id="back" hidden>← 戻る</button><span class="note">所要時間 約1分</span></div>
+      </form>
+      <div class="secure"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5d6676" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>通信は暗号化されています。ご本人の同意なく、勤務先や応募企業に情報を伝えることはありません。</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">VOICE OF 20s</span><h2 class="sec-title">こんなモヤモヤ、ありませんか？</h2></div>
+    <div class="worries">
+      <div class="worry">ノルマに追われる毎日。<br>このまま続けていいのかな。<small>営業職・26歳</small></div>
+      <div class="worry">土日休みの仕事に変わりたい。<br>でも、自分に何ができる？<small>販売職・24歳</small></div>
+      <div class="worry">転職したいけど、<br>何から始めればいいか分からない。<small>接客職・27歳</small></div>
+    </div>
+    <p class="center" style="margin-top:28px;font-weight:700;font-size:18px;color:var(--navy)">その気持ち、まずは話すだけでも大丈夫です。</p>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">WHY US</span><h2 class="sec-title">キャリアのたねの3つのサポート</h2></div>
+    <div class="strengths">
+      <div class="st">
+        <div class="st-img"><img src="hero.jpg" alt="アドバイザーとの面談" loading="lazy" width="1400" height="788"></div>
+        <div><span class="st-num">01</span><h3>営業・販売の経験を「強み」に言語化</h3><p>数字への粘り強さや、お客様との関係づくり。当たり前にやってきたことを、選考で伝わる言葉に一緒に整理します。</p><ul><li>経験の棚卸し面談（オンライン可）</li><li>職務経歴書の添削</li></ul></div>
+      </div>
+      <div class="st">
+        <div class="st-img"><img src="work.jpg" alt="新しい職場で同僚と話す様子" loading="lazy" width="1400" height="1050"></div>
+        <div><span class="st-num">02</span><h3>働き方の希望から、求人を一緒に選ぶ</h3><p>年収だけでなく、休日・残業・職場の雰囲気など「長く働けるか」を大切に、求人をご紹介します。無理に応募をすすめることはありません。</p><ul><li>土日休み・残業少なめの求人も相談可</li><li>企業ごとの面接対策</li></ul></div>
+      </div>
+      <div class="st">
+        <div class="st-img"><img src="phone.jpg" alt="自宅でスマホを見る男性" loading="lazy" width="1400" height="1050"></div>
+        <div><span class="st-num">03</span><h3>在職中でも続けやすい、LINEでのやりとり</h3><p>面談の日程調整や求人の相談は、LINEで完結できます。仕事終わりの夜や土日の面談にも対応しています。</p><ul><li>平日21時まで・土日も面談可</li><li>電話が苦手な方はLINE・メールのみでもOK</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">RESULTS</span><h2 class="sec-title">ご利用の実績</h2></div>
+    <div class="stats">
+      <div class="stat"><b>1,200<span>名</span></b><p>年間のご相談者数</p></div>
+      <div class="stat"><b>89<span>%</span></b><p>面談に満足と回答</p></div>
+      <div class="stat"><b>14<span>日</span></b><p>登録から初回面談の平均</p></div>
+    </div>
+    <p class="note center" style="margin-top:14px">※ 数字はすべて制作サンプル用の架空の値です。実際の制作では、集計期間・対象・算出方法を必ず併記します。</p>
+
+    <div class="free">
+      <div><span class="eyebrow">WHY FREE</span><h2 class="sec-title" style="font-size:24px">なぜ無料なの？</h2><p style="margin-top:12px;color:var(--muted)">キャリアのたねは、採用が決まったときに企業から紹介手数料をいただく仕組みです。そのため、求職者の方からは相談から入社まで一切費用をいただきません。</p></div>
+      <div class="diagram" aria-label="求職者・キャリアのたね・企業の関係図">
+        <div class="node">求職者<br>のあなた</div><div class="arr">⇄</div><div class="node us">キャリア<br>のたね</div><div class="arr">⇄</div><div class="node">採用したい<br>企業</div>
+        <div class="cap">あなた：利用料 0円 ／ 企業：採用決定時に手数料をお支払い</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">FLOW</span><h2 class="sec-title">ご登録後の流れ</h2></div>
+    <div class="flow">
+      <div><h3>かんたん登録</h3><p>1分で完了。ご希望の連絡方法を選べます。</p></div>
+      <div><h3>アドバイザーから連絡</h3><p>2営業日以内に、LINE・メールなどでご連絡します。</p></div>
+      <div><h3>キャリア面談</h3><p>オンラインで約45分。経験の棚卸しと希望の整理。</p></div>
+      <div><h3>求人紹介・選考対策</h3><p>ご納得いただいた求人だけに応募します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">STORIES</span><h2 class="sec-title">ご利用者の声</h2></div>
+    <div class="voices">
+      <div class="voice"><div class="who"><span class="ava">S</span><span><b>S.Kさん（26歳）</b><small>転職1回目</small></span></div><div class="move">不動産営業 <i>→</i> IT企業のカスタマーサクセス</div><p>ノルマのない環境で、お客様と長く付き合える仕事を探していました。面談で「関係づくりが得意」と気づけたのが大きかったです。</p></div>
+      <div class="voice"><div class="who"><span class="ava">M</span><span><b>M.Tさん（24歳）</b><small>転職1回目</small></span></div><div class="move">アパレル販売 <i>→</i> メーカーの営業事務</div><p>土日休みが希望でした。事務は未経験でしたが、接客で身につけた気配りを職務経歴書でどう伝えるか、一緒に考えてもらえました。</p></div>
+      <div class="voice"><div class="who"><span class="ava">R</span><span><b>R.Oさん（28歳）</b><small>転職2回目</small></span></div><div class="move">飲食店の店長 <i>→</i> 人材会社の法人営業</div><p>在職中で時間がなく、LINEで日程調整できたのが助かりました。夜の面談にも対応してもらえました。</p></div>
+    </div>
+    <p class="note center" style="margin-top:14px">※ 制作サンプル用の例文です。実際の制作では、ご本人の掲載許可を得た声のみを掲載します。転職の結果には個人差があります。</p>
+  </div>
+</section>
+
+<section class="sec sky">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">FAQ</span><h2 class="sec-title">よくあるご質問</h2></div>
+    <div class="faq">
+      <details><summary>在職中でも利用できますか？</summary><p>はい。ご利用者の多くが在職中の方です。面談は平日夜や土日にも対応しています。</p></details>
+      <details><summary>登録したら、しつこく電話がかかってきますか？</summary><p>ご登録時に選んだ連絡方法でのみご連絡します。LINEやメールだけでのやりとりも可能です。</p></details>
+      <details><summary>今の会社に転職活動が知られることはありますか？</summary><p>ご本人の同意なく、勤務先や応募企業に個人情報をお伝えすることはありません。</p></details>
+      <details><summary>すぐに転職するつもりはないのですが、相談だけでも大丈夫ですか？</summary><p>もちろん大丈夫です。情報収集や、今後のキャリアの整理だけのご相談も歓迎しています。</p></details>
+      <details><summary>本当に費用はかからないのですか？</summary><p>はい。採用が決まった企業から手数料をいただく仕組みのため、求職者の方の費用は一切かかりません。</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>まずは、話してみることから。</h2>
+    <p>転職するかどうかは、相談してから決めて大丈夫です。登録は1分、ずっと無料です。</p>
+    <a class="btn-cta" href="#entry">無料キャリア相談に申し込む<small>（1分）</small></a>
+  </div>
+</section>
+
+<section class="company" id="privacy">
+  <div class="wrap">
+    <dl>
+      <dt>サービス名</dt><dd>キャリアのたね（架空）</dd>
+      <dt>運営会社</dt><dd>株式会社サンプルキャリア（架空）</dd>
+      <dt>有料職業紹介事業許可</dt><dd>00-ユ-000000（架空の番号）</dd>
+      <dt>取扱職種の範囲</dt><dd>【実際の制作時に記載】</dd>
+      <dt>個人情報の取り扱い</dt><dd>ご登録いただいた情報は、職業紹介サービスの提供およびご連絡の目的にのみ利用します。【実際の制作ではプライバシーポリシーへリンク】</dd>
+      <dt>苦情の申出先</dt><dd>【実際の制作時に記載】</dd>
+    </dl>
+  </div>
+</section>
+</main>
+
+<div class="sp-cta" id="spcta"><a class="btn-cta" href="#entry">1分で無料相談に申し込む</a></div>
+
+<script>
+(function(){
+  const form = document.getElementById('stepForm');
+  const qs = [...form.querySelectorAll('.q')];
+  const bar = document.getElementById('bar');
+  const label = document.getElementById('stepLabel');
+  const back = document.getElementById('back');
+  const total = 5; let step = 1; const answers = {};
+
+  function show(n){
+    qs.forEach(q => q.classList.toggle('on', q.dataset.q === String(n)));
+    const done = n === 'done';
+    bar.style.width = done ? '100%' : ((n - 1) / total * 100) + '%';
+    label.textContent = done ? '完了' : '質問 ' + n + ' / ' + total;
+    back.hidden = done || n === 1;
+    step = n;
+  }
+
+  form.addEventListener('click', e => {
+    const opt = e.target.closest('.opt');
+    if (!opt) return;
+    answers[step] = opt.dataset.v;
+    show(step + 1);
+    const first = form.querySelector('.q.on input');
+    if (first) first.focus();
+  });
+  back.addEventListener('click', () => { if (typeof step === 'number' && step > 1) show(step - 1); });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('f-name');
+    const mail = document.getElementById('f-mail');
+    const eName = document.getElementById('e-name');
+    const eMail = document.getElementById('e-mail');
+    let ok = true;
+    eName.textContent = name.value.trim() ? '' : 'お名前を入力してください';
+    if (!name.value.trim()) ok = false;
+    const mailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.value.trim());
+    eMail.textContent = mailOk ? '' : 'メールアドレスの形式をご確認ください（例：taro@example.com）';
+    if (!mailOk) ok = false;
+    if (ok) show('done');
+  });
+
+  show(1);
+
+  const sp = document.getElementById('spcta');
+  const fv = document.querySelector('.form-card');
+  new IntersectionObserver(([en]) => sp.classList.toggle('show', !en.isIntersecting), { threshold: 0 }).observe(fv);
+})();
+</script>
+</body>
+</html>
