@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EC商品説明文サンプル｜めばえWeb制作</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* 商品ページの「書き方」を見せるためのサンプル集。左に実際の文面、右に制作メモ */
+:root{--bg:#f6f1e7;--card:#fff;--ink:#2a2a26;--muted:#66625a;--green:#4a6e52;--green-soft:#e3ece2;--orange:#d9773a;--orange-soft:#fbe9dc;--line:#e4dccd;--memo:#fffaf0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;line-height:1.85;font-size:15.5px}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3,h4{font-family:"Zen Maru Gothic",sans-serif;line-height:1.45;margin:0;word-break:auto-phrase;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+header{padding-block:48px 24px}
+.back{font-size:13px;color:var(--muted);text-decoration:none}
+header h1{font-size:clamp(26px,3.6vw,36px);margin-top:14px}
+header p{color:var(--muted);margin-top:12px;max-width:720px}
+.toc{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.toc a{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:700;text-decoration:none;color:var(--ink)}
+.toc a:hover{border-color:var(--green)}
+.product{background:var(--card);border:1px solid var(--line);border-radius:22px;margin-block:28px;overflow:hidden}
+.p-head{display:grid;grid-template-columns:300px 1fr;gap:28px;padding:28px;border-bottom:1px solid var(--line);align-items:start}
+.p-head img{border-radius:14px}
+.kind{font-size:12px;font-weight:700;color:var(--green);letter-spacing:.08em}
+.p-head h2{font-size:22px;margin:6px 0 14px}
+.titles{display:grid;gap:10px}
+.tl{background:#faf8f3;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.tl small{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--muted);font-weight:700;margin-bottom:4px}
+.tl small b{color:var(--green);font-variant-numeric:tabular-nums}
+.tl p{font-weight:700;font-size:14.5px;line-height:1.6}
+.p-body{display:grid;grid-template-columns:1.35fr .65fr}
+.copy{padding:28px;display:grid;gap:22px;min-width:0}
+.memo{background:var(--memo);border-left:1px solid var(--line);padding:28px 24px;display:grid;gap:16px;align-content:start;min-width:0}
+.memo h3{font-size:16px;display:flex;align-items:center;gap:8px}
+.memo h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.memo ul{margin:0;padding-left:1.1em;display:grid;gap:8px;font-size:13.5px;color:#4b473f}
+.memo li b{color:var(--ink)}
+.blk h4{font-size:15px;color:var(--green);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.blk h4 span{font-family:"Noto Sans JP";font-size:11px;background:var(--green-soft);color:var(--green);padding:1px 8px;border-radius:999px;font-weight:700}
+.catch{font-family:"Zen Maru Gothic";font-weight:900;font-size:21px;line-height:1.55}
+.bullets{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.bullets li{background:#faf8f3;border-radius:10px;padding:10px 14px;font-size:14.5px}
+.bullets li b{color:var(--ink)}
+.scene{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.scene div{border:1px dashed var(--line);border-radius:12px;padding:12px;font-size:14px}
+.scene b{display:block;font-size:13px;color:var(--orange)}
+.spec{width:100%;border-collapse:collapse;font-size:14px}
+.spec th,.spec td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.spec th{width:32%;background:#faf8f3;font-weight:700;color:#4b473f}
+.faq{display:grid;gap:8px}
+.faq div{font-size:14.5px}
+.faq b{display:block;color:var(--green)}
+.honest{background:var(--orange-soft);border-radius:12px;padding:14px 16px;font-size:14.5px}
+.honest b{color:var(--orange)}
+.note{font-size:12.5px;color:var(--muted)}
+.tablewrap{overflow-x:auto}
+footer{padding-block:30px 60px;text-align:center;color:var(--muted);font-size:13px}
+@media (max-width:860px){
+  .p-head{grid-template-columns:1fr;padding:20px}
+  .p-head img{max-width:320px}
+  .p-body{grid-template-columns:1fr}
+  .memo{border-left:none;border-top:1px solid var(--line);padding:22px 20px}
+  .copy{padding:22px 20px}
+  .scene{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <a class="back" href="../">← めばえWeb制作 ポートフォリオへ</a>
+  <h1>EC商品説明文サンプル</h1>
+  <p>楽天市場・Amazonの書式に合わせた商品名と、購入の決め手になる説明文の制作例です。売り文句だけでなく、景品表示法・食品表示・家庭用品品質表示法などのルールに沿って書くことを大切にしています。右側の「制作メモ」に、なぜその書き方にしたかを記載しました。</p>
+  <div class="toc"><a href="#board">ひのきのまな板</a><a href="#towel">綿100%バスタオル</a><a href="#coffee">ドリップバッグコーヒー</a></div>
+  <p class="note" style="margin-top:12px">※ 商品・ブランド・製造者はすべて架空です。写真はAI生成のイメージです。</p>
+</header>
+
+<main class="wrap">
+
+<!-- ===== 1. まな板 ===== -->
+<article class="product" id="board">
+  <div class="p-head">
+    <img src="board.jpg" alt="ひのきのまな板と切った野菜" width="900" height="900" loading="lazy">
+    <div>
+      <span class="kind">キッチン雑貨</span>
+      <h2>国産ひのき まな板（架空ブランド：木と暮らす）</h2>
+      <div class="titles">
+        <div class="tl"><small>楽天 商品名<b>63字（上限127字）</b></small><p>まな板 ひのき 国産 木製 36×21cm 厚さ3cm 一枚板 軽い 刃あたりがやさしい 日本製 キッチン 木のまな板 ギフト</p></div>
+        <div class="tl"><small>Amazon 商品名<b>57字（上限75字）</b></small><p>木と暮らす ひのき まな板 国産 一枚板 36×21×3cm 約700g 刃あたりがやさしい木製カッティングボード</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="p-body">
+    <div class="copy">
+      <div class="blk"><h4>キャッチコピー</h4><p class="catch">トントンと、やわらかい音。<br>毎日の下ごしらえが、少し楽しみになるまな板。</p></div>
+      <div class="blk"><h4>Amazon 商品の仕様 <span>5点</span></h4>
+        <ul class="bullets">
+          <li><b>【刃あたりがやさしい】</b>ひのきはやわらかく弾力のある木材のため、包丁の刃が当たったときの衝撃をやわらげ、刃こぼれしにくい使い心地です。</li>
+          <li><b>【約700gで扱いやすい】</b>36×21×厚さ3cmの一枚板。片手で持ち上げて洗い場へ運べる重さです。</li>
+          <li><b>【ひのきの香り】</b>使い始めは、ひのき特有のすっきりとした香りがします（香りは使用とともに穏やかになります）。</li>
+          <li><b>【国産ひのきの一枚板】</b>国内で育ったひのきを、継ぎ目のない一枚板に仕上げています。</li>
+          <li><b>【お手入れ】</b>使用前に水で濡らし、使用後は中性洗剤で洗って立てかけて乾かしてください。食器洗い乾燥機・漂白剤はご使用いただけません。</li>
+        </ul>
+      </div>
+      <div class="blk"><h4>使うシーン</h4>
+        <div class="scene"><div><b>朝</b>パンやフルーツを切って、そのまま食卓へ。</div><div><b>夕方</b>野菜を刻む音が心地よい、平日の下ごしらえ。</div><div><b>週末</b>チーズや生ハムをのせて、おもてなしプレートに。</div></div>
+      </div>
+      <div class="blk"><h4>正直にお伝えしたいこと</h4>
+        <p class="honest"><b>木のまな板には、包丁の跡や色の変化がつきます。</b>使い込むほどに味わいが出る素材です。黒ずみを防ぐため、使用後はしっかり乾かしてください。生肉・生魚を切ったあとは、すぐに洗うことをおすすめします。</p>
+      </div>
+      <div class="blk"><h4>商品仕様</h4>
+        <div class="tablewrap"><table class="spec">
+          <tr><th>サイズ</th><td>約 幅36 × 奥行21 × 厚さ3cm</td></tr>
+          <tr><th>重さ</th><td>約700g（木材のため個体差があります）</td></tr>
+          <tr><th>材質</th><td>ひのき（国産）</td></tr>
+          <tr><th>表面仕上げ</th><td>無塗装</td></tr>
+          <tr><th>原産国</th><td>日本</td></tr>
+          <tr><th>ご注意</th><td>食器洗い乾燥機・電子レンジ・漂白剤は使用不可</td></tr>
+        </table></div>
+      </div>
+      <div class="blk"><h4>よくある質問</h4>
+        <div class="faq"><div><b>Q. 反ったりしませんか？</b>直射日光や乾燥機で急に乾かすと反りの原因になります。風通しのよい場所で立てて乾かしてください。</div><div><b>Q. においが移りませんか？</b>使う前に水で全体を濡らしておくと、食材のにおいや色が移りにくくなります。</div></div>
+      </div>
+    </div>
+    <aside class="memo">
+      <h3>制作メモ</h3>
+      <ul>
+        <li><b>「抗菌」とは書かない。</b>ひのきは抗菌をうたう商品が多いですが、試験の根拠（JIS Z 2801等）がない場合は優良誤認のおそれがあるため、香りや使い心地で魅力を伝えました。</li>
+        <li><b>商品名は「検索される言葉」を左に。</b>スマホでは先頭20〜30字しか見えないため、「まな板 ひのき 国産 木製」を先頭に置き、記号や同じ語の繰り返しは使っていません。</li>
+        <li><b>重さを数字で。</b>「軽い」だけでなく「約700g・片手で運べる」と具体的に書き、購入後のギャップを防ぎます。</li>
+        <li><b>デメリットを先に。</b>包丁跡・色の変化を正直に書き、対策とセットにすることで返品・低評価を減らします。</li>
+      </ul>
+    </aside>
+  </div>
+</article>
+
+<!-- ===== 2. タオル ===== -->
+<article class="product" id="towel">
+  <div class="p-head">
+    <img src="towel.jpg" alt="3色のバスタオル" width="900" height="900" loading="lazy">
+    <div>
+      <span class="kind">日用品・繊維製品</span>
+      <h2>綿100% バスタオル 3枚セット（架空ブランド：まいにちリネン）</h2>
+      <div class="titles">
+        <div class="tl"><small>楽天 商品名<b>71字（上限127字）</b></small><p>バスタオル 3枚セット 綿100% 60×120cm ふんわり 吸水 くすみカラー ベージュ グリーン グレー 洗濯機OK 新生活 まとめ買い</p></div>
+        <div class="tl"><small>Amazon 商品名<b>56字（上限75字）</b></small><p>まいにちリネン バスタオル 3枚セット 綿100% 60×120cm くすみカラー（ベージュ・グリーン・グレー）</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="p-body">
+    <div class="copy">
+      <div class="blk"><h4>キャッチコピー</h4><p class="catch">お風呂あがりの「ふわっ」を、毎日に。<br>洗面所になじむ、やさしい3色。</p></div>
+      <div class="blk"><h4>Amazon 商品の仕様 <span>5点</span></h4>
+        <ul class="bullets">
+          <li><b>【綿100%のパイル】</b>ループ状のパイルが水分をとらえ、肌にふんわりと触れる風合いです。</li>
+          <li><b>【ちょうどいい60×120cm】</b>全身を包める大きさで、洗濯物がかさばりすぎないサイズです。</li>
+          <li><b>【くすみカラー3色セット】</b>ベージュ・グリーン・グレーの3色。家族で色を分けて使えます。</li>
+          <li><b>【洗濯機で洗える】</b>ネットに入れて洗濯機で洗えます。柔軟剤の使いすぎは吸水性が落ちる原因になるため、控えめがおすすめです。</li>
+          <li><b>【はじめの数回は毛羽が出ます】</b>パイル製品の性質上、最初の数回の洗濯では毛羽が出ます。単独での洗濯をおすすめします。</li>
+        </ul>
+      </div>
+      <div class="blk"><h4>使うシーン</h4>
+        <div class="scene"><div><b>お風呂あがり</b>家族それぞれが自分の色を。</div><div><b>ジムや温泉</b>大きすぎないので、バッグにも収まります。</div><div><b>新生活</b>3枚あれば、洗い替えも安心。</div></div>
+      </div>
+      <div class="blk"><h4>正直にお伝えしたいこと</h4>
+        <p class="honest"><b>使い始めは毛羽が出やすく、濃い色は色移りすることがあります。</b>はじめの2〜3回は単独で洗い、白いものとは分けて洗濯してください。回数を重ねると落ち着いてきます。</p>
+      </div>
+      <div class="blk"><h4>商品仕様・品質表示</h4>
+        <div class="tablewrap"><table class="spec">
+          <tr><th>サイズ</th><td>約 60 × 120cm</td></tr>
+          <tr><th>重さ</th><td>約350g／枚</td></tr>
+          <tr><th>組成</th><td>綿100%</td></tr>
+          <tr><th>カラー</th><td>ベージュ・グリーン・グレー 各1枚</td></tr>
+          <tr><th>取扱い</th><td>洗濯機可（ネット使用）／漂白剤不可／タンブル乾燥は低温で</td></tr>
+          <tr><th>表示者</th><td>株式会社サンプルリネン（架空）　連絡先：記載</td></tr>
+          <tr><th>原産国</th><td>記載（実際の制作時に製造元の情報で表示）</td></tr>
+        </table></div>
+      </div>
+      <div class="blk"><h4>よくある質問</h4>
+        <div class="faq"><div><b>Q. 新品なのに水をはじくのですが？</b>製造時の油分が残っていることがあります。1〜2回洗濯すると吸水しやすくなります。</div><div><b>Q. 乾燥機は使えますか？</b>低温での使用が可能です。高温は縮みやごわつきの原因になります。</div></div>
+      </div>
+    </div>
+    <aside class="memo">
+      <h3>制作メモ</h3>
+      <ul>
+        <li><b>組成と表示者を必ず記載。</b>タオルは家庭用品品質表示法の対象のため、「綿100%」の組成と表示者名・連絡先を仕様欄に入れています。</li>
+        <li><b>「オーガニック」と書かない。</b>認証（GOTS等）と混率の根拠がない場合は優良誤認のおそれがあるため、「綿100%のパイル」という事実で伝えています。</li>
+        <li><b>「吸水力抜群」より使い方の注意を。</b>根拠のない最上級表現は避け、柔軟剤や初回の毛羽など、満足度に直結する情報を優先しました。</li>
+        <li><b>色と使い分けを提案。</b>3枚セットの価値を「家族で色分け」「洗い替え」という使い方で伝えています。</li>
+      </ul>
+    </aside>
+  </div>
+</article>
+
+<!-- ===== 3. コーヒー ===== -->
+<article class="product" id="coffee">
+  <div class="p-head">
+    <img src="coffee.jpg" alt="マグカップにかけたドリップバッグにお湯を注ぐ様子" width="900" height="900" loading="lazy">
+    <div>
+      <span class="kind">食品</span>
+      <h2>ドリップバッグコーヒー 中深煎りブレンド 10袋（架空ブランド：あさの珈琲）</h2>
+      <div class="titles">
+        <div class="tl"><small>楽天 商品名<b>64字（上限127字）</b></small><p>ドリップバッグ コーヒー 10袋 中深煎り ブレンド 10g 個包装 ドリップコーヒー 自家焙煎 プチギフト 送料無料 メール便</p></div>
+        <div class="tl"><small>Amazon 商品名<b>50字（上限75字）</b></small><p>あさの珈琲 ドリップバッグコーヒー 中深煎りブレンド 10g×10袋 個包装（ブラジル・エチオピア）</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="p-body">
+    <div class="copy">
+      <div class="blk"><h4>キャッチコピー</h4><p class="catch">お湯を注いで、2分のひと休み。<br>香ばしさと、ほのかな甘みの中深煎り。</p></div>
+      <div class="blk"><h4>Amazon 商品の仕様 <span>5点</span></h4>
+        <ul class="bullets">
+          <li><b>【中深煎りのブレンド】</b>ブラジルのナッツのような香ばしさに、エチオピアの華やかな香りを合わせました。苦みはおだやかで、ミルクとも合います。</li>
+          <li><b>【1袋10gでしっかり1杯】</b>粉は1袋あたり10g。140〜160mlのお湯で、ほどよい濃さに仕上がります。</li>
+          <li><b>【カップにかけるだけ】</b>専用の器具は不要です。ご自宅でも職場でも、すぐに淹れられます。</li>
+          <li><b>【個包装で香りを守る】</b>1袋ずつ個包装のため、開けるたびに挽きたてに近い香りを楽しめます。</li>
+          <li><b>【ちょっとしたお礼に】</b>10袋入りの箱は郵便受けに届くサイズ。プチギフトにもお使いいただけます。</li>
+        </ul>
+      </div>
+      <div class="blk"><h4>おいしい淹れ方</h4>
+        <div class="scene"><div><b>1. セット</b>袋の上部を切り取り、取っ手をカップにかけます。</div><div><b>2. 蒸らす</b>粉全体が湿る程度のお湯を注ぎ、20秒待ちます。</div><div><b>3. 注ぐ</b>2〜3回に分けて、合計140〜160mlを注ぎます。</div></div>
+      </div>
+      <div class="blk"><h4>正直にお伝えしたいこと</h4>
+        <p class="honest"><b>マグカップの形によっては、袋がかけにくい場合があります。</b>口径が7〜9cm程度のカップがおすすめです。深すぎるマグでは、袋の底がコーヒーに浸かり、濃く感じることがあります。</p>
+      </div>
+      <div class="blk"><h4>商品仕様・食品表示</h4>
+        <div class="tablewrap"><table class="spec">
+          <tr><th>名称</th><td>レギュラーコーヒー（粉）</td></tr>
+          <tr><th>原材料名</th><td>コーヒー豆（生豆生産国名：ブラジル、エチオピア）</td></tr>
+          <tr><th>内容量</th><td>100g（10g × 10袋）</td></tr>
+          <tr><th>挽き方</th><td>中細挽き</td></tr>
+          <tr><th>賞味期限</th><td>枠外下部に記載（製造日から12か月）</td></tr>
+          <tr><th>保存方法</th><td>高温・多湿・直射日光を避けて保存してください</td></tr>
+          <tr><th>製造者</th><td>あさの珈琲 株式会社（架空）／所在地：記載</td></tr>
+        </table></div>
+      </div>
+      <div class="blk"><h4>よくある質問</h4>
+        <div class="faq"><div><b>Q. 酸味は強いですか？</b>中深煎りのため酸味はひかえめです。華やかな香りを少し感じる程度です。</div><div><b>Q. アイスコーヒーにもできますか？</b>お湯を半量（約80ml）にして濃いめに淹れ、氷を入れたグラスに注いでください。</div></div>
+      </div>
+    </div>
+    <aside class="memo">
+      <h3>制作メモ</h3>
+      <ul>
+        <li><b>食品表示の項目をすべて記載。</b>名称・原材料名（生豆生産国名）・内容量・挽き方・賞味期限・保存方法・製造者を仕様欄にまとめています。</li>
+        <li><b>産地名の付け方に注意。</b>「エチオピアブレンド」と名乗るには、その国の豆が一定割合以上必要なため、商品名ではなく「ブラジル・エチオピア」と事実で表記しました。</li>
+        <li><b>「最高級」「No.1」を使わない。</b>根拠を示せない最上級表現の代わりに、味の特徴と淹れ方の数字（10g・140〜160ml・20秒）で品質を伝えています。</li>
+        <li><b>「送料無料」は事実の場合のみ。</b>楽天の商品名に入れる場合は、実際の配送条件と一致させます。</li>
+      </ul>
+    </aside>
+  </div>
+</article>
+
+</main>
+<footer class="wrap">© めばえWeb制作　ご相談はクラウドワークス／ランサーズのメッセージからお願いします。</footer>
+</body>
+</html>
