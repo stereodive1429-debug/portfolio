@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>肩こり・首こり専門 からだ整え処こもれび｜〇〇駅徒歩3分の整体院（制作サンプル）</title>
+<meta name="description" content="デスクワークの肩こり・首こりに向き合う、完全予約制の整体院。初回は検査とカウンセリング込み60分。※架空の整体院を想定した制作サンプルです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --base:#faf7f1;      /* オフホワイト */
+  --sand:#f1ebe0;      /* 交互背景のベージュ */
+  --ink:#2d2a25;
+  --muted:#6e675d;
+  --green:#4a6e52;
+  --green-deep:#355240;
+  --green-soft:#e3ece2;
+  --cta:#d9773a;       /* 予約ボタンだけに使う色 */
+  --cta-deep:#bf6328;
+  --line:#e4dccd;
+  --white:#fff;
+  --r:18px;
+  --shadow:0 18px 40px -24px rgba(45,42,37,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--base);color:var(--ink);font-family:"Zen Maru Gothic","Noto Sans JP",sans-serif;font-size:16px;line-height:1.9;letter-spacing:.02em}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.narrow{max-width:860px}
+h1,h2,h3{line-height:1.45;margin:0;font-weight:700;word-break:auto-phrase;text-wrap:balance}
+.nw{display:inline-block}
+p{margin:0}
+
+/* ---------- 共通パーツ ---------- */
+.en{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;color:var(--green);letter-spacing:.08em;font-size:20px;display:block;line-height:1}
+.sec{padding:96px 0}
+.sec.alt{background:var(--sand)}
+.sec-head{text-align:center;margin-bottom:52px}
+.sec-head h2{font-size:clamp(24px,3.2vw,34px);margin-top:10px}
+.sec-head p{color:var(--muted);margin-top:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-cta{background:var(--cta);color:#fff;padding:18px 34px;font-size:17px;box-shadow:0 12px 24px -12px rgba(217,119,58,.9)}
+.btn-cta:hover{background:var(--cta-deep);transform:translateY(-2px)}
+.btn-cta small{display:block;font-size:12px;font-weight:500;opacity:.9}
+.btn-cta .stack{display:flex;flex-direction:column;line-height:1.35;text-align:left}
+.arrow{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.25);display:grid;place-items:center;flex:none}
+.tel-link{font-weight:700;text-decoration:none;color:var(--green-deep);display:inline-flex;align-items:center;gap:6px}
+.note{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* reveal：要素は最初から見えている状態で、少し浮き上がるだけ */
+.js .rv{transform:translateY(18px);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ---------- サンプル表記 ---------- */
+.sample-bar{background:var(--ink);color:#f3efe7;font-size:12px;text-align:center;padding:7px 12px;letter-spacing:.04em}
+
+/* ---------- ヘッダー ---------- */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(250,247,241,.94);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.scrolled{border-color:var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:38px;height:38px;border-radius:50%;background:var(--green);display:grid;place-items:center}
+.logo-txt{line-height:1.2}
+.logo-txt small{display:block;font-size:11px;color:var(--muted);letter-spacing:.1em}
+.logo-txt b{font-size:19px;letter-spacing:.06em}
+.hd-nav{display:flex;align-items:center;gap:26px;font-size:14px}
+.hd-nav a.l{text-decoration:none;color:var(--muted)}
+.hd-nav a.l:hover{color:var(--ink)}
+.hd-tel{text-align:right;line-height:1.3}
+.hd-tel small{display:block;font-size:11px;color:var(--muted)}
+.hd .btn-cta{padding:12px 22px;font-size:14px}
+
+/* ---------- ファーストビュー ---------- */
+.fv{position:relative;min-height:min(86vh,760px);display:flex;align-items:center;overflow:hidden;color:var(--ink)}
+.fv-bg{position:absolute;inset:0;background:url(hero.jpg) center right/cover no-repeat;transform:scale(1.04);animation:fvzoom 14s ease-out forwards}
+@keyframes fvzoom{to{transform:scale(1)}}
+.fv::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(250,247,241,.96) 0%,rgba(250,247,241,.88) 34%,rgba(250,247,241,.2) 62%,rgba(250,247,241,0) 100%)}
+.fv-inner{position:relative;z-index:2;width:100%}
+.fv-copy{max-width:540px}
+.fv-tag{display:inline-flex;gap:8px;align-items:center;background:var(--green);color:#fff;font-size:13px;font-weight:700;padding:6px 16px;border-radius:999px;letter-spacing:.06em}
+.fv h1{font-size:clamp(30px,4.6vw,52px);margin:22px 0 18px;letter-spacing:.04em}
+.fv h1 .mark{background:linear-gradient(transparent 68%,rgba(217,119,58,.28) 68%)}
+.fv-lead{color:var(--muted);font-size:16px}
+.fv-icons{display:flex;gap:10px;margin:26px 0 30px;flex-wrap:wrap}
+.fv-icon{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:13px;line-height:1.3;box-shadow:var(--shadow)}
+.fv-icon svg{flex:none}
+.fv-icon b{display:block;font-size:15px}
+.fv-offer{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.fv-price{line-height:1.3}
+.fv-price small{display:block;font-size:12px;color:var(--muted)}
+.fv-price b{font-size:30px;color:var(--cta-deep);letter-spacing:.02em}
+.fv-price b span{font-size:15px}
+
+/* ---------- お悩み ---------- */
+.worry{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.worry-photo{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3.4}
+.worry-photo img{width:100%;height:100%;object-fit:cover}
+.check{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.check li{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 18px 14px 52px;position:relative;font-weight:500}
+.check li::before{content:"";position:absolute;left:18px;top:50%;width:20px;height:20px;margin-top:-10px;border-radius:6px;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.worry-after{margin-top:28px;font-size:19px;font-weight:700}
+.worry-after span{color:var(--green)}
+
+/* ---------- なぜ ---------- */
+.why{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.why h3{font-size:clamp(21px,2.6vw,27px);margin-bottom:20px}
+.why p+p{margin-top:16px}
+.why .em{font-weight:700;color:var(--green-deep);background:linear-gradient(transparent 70%,var(--green-soft) 70%)}
+.why-photo{position:relative}
+.why-photo img{border-radius:var(--r);box-shadow:var(--shadow)}
+.why-photo figcaption{position:absolute;left:-18px;bottom:-22px;background:var(--white);border-radius:14px;padding:14px 18px;box-shadow:var(--shadow);font-size:13px;max-width:260px;line-height:1.6}
+.why-photo figcaption b{color:var(--green);display:block;font-size:14px}
+
+/* ---------- 選ばれる理由 ---------- */
+.reasons{display:grid;gap:72px}
+.reason{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.reason:nth-child(even) .reason-img{order:2}
+.reason-img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow)}
+.reason-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.reason:hover .reason-img img{transform:scale(1.03)}
+.reason-num{font-family:"Cormorant Garamond",serif;font-size:64px;line-height:1;color:var(--green);opacity:.35}
+.reason h3{font-size:clamp(20px,2.4vw,25px);margin:6px 0 16px}
+.reason p{color:var(--muted)}
+.reason ul{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.reason li{font-size:13px;background:var(--green-soft);color:var(--green-deep);padding:4px 12px;border-radius:999px;font-weight:500}
+
+/* ---------- 中間CTA ---------- */
+.mid-cta{background:var(--green);color:#fff;border-radius:24px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:88px}
+.mid-cta h3{font-size:clamp(19px,2.4vw,24px)}
+.mid-cta p{opacity:.85;font-size:14px;margin-top:6px}
+
+/* ---------- お客様の声 ---------- */
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.voice{background:var(--white);border-radius:var(--r);padding:28px;border:1px solid var(--line);display:flex;flex-direction:column}
+.voice-who{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.voice-ava{width:52px;height:52px;border-radius:50%;background:var(--green-soft);display:grid;place-items:center;color:var(--green);font-weight:700;font-size:18px;flex:none}
+.voice-who b{display:block;font-size:15px}
+.voice-who small{color:var(--muted);font-size:12px}
+.voice dl{margin:0;font-size:14.5px}
+.voice dt{font-weight:700;color:var(--green-deep);font-size:13px;margin-top:12px}
+.voice dt:first-child{margin-top:0}
+.voice dd{margin:4px 0 0;color:var(--ink)}
+.voice-disclaimer{margin-top:auto;padding-top:16px;font-size:12px;color:var(--muted);border-top:1px dashed var(--line)}
+.voice-note{text-align:center;margin-top:24px}
+
+/* ---------- 院長 ---------- */
+.greet{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.greet-photo{position:relative}
+.greet-photo img{border-radius:var(--r);box-shadow:var(--shadow);aspect-ratio:4/5;object-fit:cover;width:100%}
+.greet-name{position:absolute;right:-20px;bottom:28px;background:var(--white);padding:14px 22px;border-radius:14px;box-shadow:var(--shadow);line-height:1.4}
+.greet-name small{display:block;font-size:12px;color:var(--muted)}
+.greet-name b{font-size:20px;letter-spacing:.1em}
+.greet h3{font-size:clamp(21px,2.6vw,27px);margin:12px 0 22px}
+.greet p+p{margin-top:16px}
+.greet .profile{margin-top:26px;background:var(--white);border-radius:14px;padding:18px 22px;font-size:14px;border:1px solid var(--line)}
+.greet .profile dt{font-weight:700;color:var(--green-deep);font-size:13px}
+.greet .profile dd{margin:2px 0 10px;color:var(--muted)}
+.greet .profile dd:last-child{margin-bottom:0}
+
+/* ---------- 料金 ---------- */
+.price{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch}
+.price-main{background:var(--white);border-radius:24px;padding:38px;border:2px solid var(--cta);position:relative}
+.price-main .ribbon{position:absolute;top:-15px;left:32px;background:var(--cta);color:#fff;font-size:13px;font-weight:700;padding:4px 16px;border-radius:999px}
+.price-main h3{font-size:22px}
+.price-main .sub{color:var(--muted);font-size:14px;margin:6px 0 18px}
+.price-big{display:flex;align-items:baseline;gap:6px;color:var(--cta-deep)}
+.price-big b{font-size:52px;font-family:"Noto Sans JP";font-weight:700;letter-spacing:-.01em;line-height:1}
+.price-big span{font-size:18px;font-weight:700}
+.price-incl{margin:22px 0 26px;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-size:14px}
+.price-incl li{display:flex;gap:8px;align-items:center}
+.price-incl li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);flex:none}
+.price-side{background:var(--white);border-radius:24px;padding:32px;border:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--line);gap:12px}
+.price-row:last-of-type{border:none}
+.price-row b{font-size:20px;font-family:"Noto Sans JP"}
+.promise{margin-top:auto;background:var(--green-soft);border-radius:12px;padding:14px 16px;font-size:13.5px;color:var(--green-deep);font-weight:500;line-height:1.7}
+
+/* ---------- 流れ ---------- */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{background:var(--white);border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.step-img{aspect-ratio:4/3;overflow:hidden;background:var(--green-soft)}
+.step-img img{width:100%;height:100%;object-fit:cover}
+.step-body{padding:20px 20px 24px}
+.step-body::before{counter-increment:s;content:"STEP " counter(s,decimal-leading-zero);font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--green);font-size:17px;letter-spacing:.06em}
+.step h3{font-size:17px;margin:4px 0 8px}
+.step p{font-size:14px;color:var(--muted);line-height:1.75}
+.step-icon{height:100%;display:grid;place-items:center}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:12px}
+.faq details{background:var(--white);border-radius:14px;border:1px solid var(--line);overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:20px 56px 20px 60px;position:relative;font-weight:700}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";position:absolute;left:20px;top:17px;font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--green);line-height:1.2}
+.faq summary::after{content:"";position:absolute;right:24px;top:50%;width:12px;height:12px;margin-top:-8px;border-right:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(45deg);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
+.faq .a{padding:0 24px 22px 60px;color:var(--muted);position:relative}
+.faq .a::before{content:"A";position:absolute;left:22px;top:-4px;font-family:"Cormorant Garamond",serif;font-size:26px;color:var(--cta);line-height:1.2}
+
+/* ---------- アクセス・空き状況 ---------- */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.access-photo img{border-radius:var(--r);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover;width:100%}
+.info{margin:26px 0 0;display:grid;grid-template-columns:96px 1fr;row-gap:12px;font-size:15px}
+.info dt{color:var(--muted);font-size:14px}
+.info dd{margin:0}
+.slots{background:var(--white);border-radius:var(--r);padding:26px;border:1px solid var(--line)}
+.slots h3{font-size:18px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.slots h3 small{font-size:12px;color:var(--muted);font-weight:500}
+.slots table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px;text-align:center;table-layout:fixed}
+.slots th{font-weight:500;color:var(--muted);font-size:12px;padding:6px 0;line-height:1.3}
+.slots th b{display:block;color:var(--ink);font-size:14px}
+.slots th.sat b{color:#3d6ea8}.slots th.sun b{color:#c0543f}
+.slots td{padding:9px 0;border-top:1px solid var(--line)}
+.slots td:first-child{color:var(--muted);font-size:12px}
+.o{color:var(--green);font-weight:700}.t{color:var(--cta);font-weight:700}.x{color:#bdb5a8}
+.slots .legend{font-size:12px;color:var(--muted);margin-top:12px}
+.map{margin-top:20px;border-radius:var(--r);min-height:200px;background:repeating-linear-gradient(-45deg,#ece5d7 0 10px,#f3eee4 10px 20px);display:grid;place-items:center;color:var(--muted);font-size:14px;border:1px solid var(--line)}
+
+/* ---------- 最終CTA ---------- */
+.final{position:relative;color:#fff;text-align:center;padding:110px 20px;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:url(exterior.jpg) center/cover}
+.final::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(53,82,64,.82),rgba(45,42,37,.86))}
+.final>*{position:relative;z-index:1}
+.final h2{font-size:clamp(24px,3.4vw,36px)}
+.final p{opacity:.9;margin:16px auto 34px;max-width:560px}
+.final .tel-link{color:#fff;margin-top:22px;font-size:15px}
+
+footer{background:var(--ink);color:#cfc8bb;text-align:center;font-size:12.5px;padding:36px 20px 120px;line-height:2}
+footer b{color:#fff;font-size:15px;letter-spacing:.08em}
+
+/* ---------- スマホ固定バー ---------- */
+.sp-bar{display:none}
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width:960px){
+  .hd-nav .l,.hd-tel{display:none}
+}
+@media (max-width:820px){
+  body{font-size:15px}
+  .sec{padding:68px 0}
+  .sec-head{margin-bottom:36px}
+  .hd{height:62px}
+  .hd .btn-cta{display:none}
+  .fv{min-height:auto;flex-direction:column;align-items:stretch}
+  .fv-bg{position:relative;height:56vw;min-height:240px;background-position:72% center;animation:none;transform:none}
+  .fv::before{display:none}
+  .fv-inner{padding-block:0 40px;margin-top:-36px}
+  .fv-copy{background:var(--base);border-radius:24px 24px 0 0;padding-top:28px}
+  .fv h1{margin:16px 0 14px}
+  .fv-icons{gap:8px;margin:20px 0 24px}
+  .fv-icon{padding:8px 10px;font-size:12px;flex:1;min-width:0}
+  .fv-icon svg{display:none}
+  .fv-offer .btn-cta{width:100%}
+  .worry,.why,.reason,.greet,.price,.access{grid-template-columns:1fr;gap:32px}
+  .reason:nth-child(even) .reason-img{order:0}
+  .reasons{gap:56px}
+  .why-photo figcaption{position:relative;left:auto;bottom:auto;max-width:none;margin:-30px 14px 0}
+  .voices{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr 1fr;gap:12px}
+  .step-body{padding:14px 14px 18px}
+  .step p{font-size:13px}
+  .greet-name{right:12px}
+  .price-main,.price-side{padding:28px 22px}
+  .price-incl{grid-template-columns:1fr}
+  .mid-cta{padding:30px 24px;margin-top:64px}
+  .mid-cta .btn-cta{width:100%}
+  .sp-bar{display:grid;grid-template-columns:64px 64px 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(250,247,241,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s}
+  .sp-bar.show{transform:none}
+  .sp-bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;font-size:10.5px;font-weight:700;border-radius:12px;line-height:1.2;gap:2px}
+  .sp-bar .sub{background:var(--white);border:1px solid var(--line);color:var(--green-deep);height:54px}
+  .sp-bar .main{background:var(--cta);color:#fff;font-size:15px;flex-direction:row;gap:8px;height:54px}
+}
+@media (max-width:380px){
+  .fv-icon b{font-size:13px}
+  .flow{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="sample-bar">制作サンプル：架空の整体院を想定したページです。写真はAI生成のイメージで、実際の制作では院の実写真を使用します。</div>
+
+<header id="hd">
+  <div class="wrap hd">
+    <a class="logo" href="#top" aria-label="からだ整え処こもれび トップへ">
+      <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c-5-3-8-7-8-11a8 8 0 0 1 16 0c0 4-3 8-8 11Z" fill="#fff"/><path d="M12 8v8M12 12l2.6-1.8M12 14l-2.6-1.8" stroke="#4a6e52" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+      <span class="logo-txt"><small>肩こり・首こり専門</small><b>からだ整え処 こもれび</b></span>
+    </a>
+    <nav class="hd-nav">
+      <a class="l" href="#reason">選ばれる理由</a>
+      <a class="l" href="#price">料金</a>
+      <a class="l" href="#access">アクセス</a>
+      <div class="hd-tel"><small>受付 10:00〜20:00（水曜休）</small><a class="tel-link" href="tel:000-0000-0000">000-0000-0000</a></div>
+      <a class="btn btn-cta" href="#access">空き状況を見る</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== ファーストビュー ===== -->
+<section class="fv">
+  <div class="fv-bg" role="img" aria-label="施術者がお客様の肩に手を添えている様子"></div>
+  <div class="wrap fv-inner">
+    <div class="fv-copy">
+      <span class="fv-tag">〇〇駅 徒歩3分｜肩こり・首こり専門</span>
+      <h1>デスクワークの<br><span class="mark">肩こり・首こり</span>に、<br>ちゃんと向き合う整体院。</h1>
+      <p class="fv-lead">揉んでその場をしのぐのではなく、姿勢やからだの使い方を一緒に確認しながら、楽な状態が続くことを目指します。</p>
+      <div class="fv-icons">
+        <div class="fv-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4a6e52" stroke-width="1.6" aria-hidden="true"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M8 21l2-4M16 21l-2-4"/><circle cx="9" cy="14" r=".8" fill="#4a6e52"/><circle cx="15" cy="14" r=".8" fill="#4a6e52"/></svg><div><b>徒歩3分</b>〇〇駅 東口</div></div>
+        <div class="fv-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4a6e52" stroke-width="1.6" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12"/><path d="M10 21v-6h4v6"/></svg><div><b>完全個室</b>予約制</div></div>
+        <div class="fv-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4a6e52" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>21時まで</b>仕事帰りOK</div></div>
+      </div>
+      <div class="fv-offer">
+        <div class="fv-price"><small>初回（検査・カウンセリング込み 60分）</small><b>3,980<span>円</span></b></div>
+        <a class="btn btn-cta" href="#access"><span class="stack">空き状況を見て予約する<small>24時間WEB受付・1分で完了</small></span><span class="arrow"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2l4 4-4 4" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== お悩み ===== -->
+<section class="sec">
+  <div class="wrap worry">
+    <div class="worry-photo rv"><img src="tired.jpg" alt="夕方のオフィスで首の後ろを押さえる女性" loading="lazy" width="1200" height="900"></div>
+    <div class="rv">
+      <span class="en">Check</span>
+      <h2 style="font-size:clamp(23px,3vw,31px);margin:10px 0 26px">こんなお悩み、<br>ありませんか？</h2>
+      <ul class="check">
+        <li>夕方になると肩が重く、頭までつらくなる</li>
+        <li>マッサージに行っても、数日で元に戻ってしまう</li>
+        <li>在宅勤務になってから、首や腰も気になってきた</li>
+        <li>猫背やストレートネックを指摘されたことがある</li>
+        <li>朝起きた時点で、すでに首まわりがこわばっている</li>
+      </ul>
+      <p class="worry-after">ひとつでも当てはまる方は、<span>一度からだの状態を確認</span>してみませんか。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== なぜ ===== -->
+<section class="sec alt">
+  <div class="wrap why">
+    <div class="rv">
+      <span class="en">Why</span>
+      <h3 style="margin-top:10px">揉んでも、また<br>つらくなるのはなぜ？</h3>
+      <p>肩がこっていると、こっている場所を揉みたくなります。もちろん、それで一時的に楽になることもあります。</p>
+      <p>ただ、長時間のデスクワークでは、<span class="em">頭が前に出た姿勢や、背中・肩甲骨まわりが動きにくい状態</span>が続いていることが少なくありません。つらさを感じる場所と、負担がかかっている原因が別のところにあるケースもあります。</p>
+      <p>こもれびでは、まず姿勢と動きをていねいに確認し、<span class="em">「なぜつらくなりやすいのか」を一緒に整理する</span>ところから始めます。</p>
+    </div>
+    <figure class="why-photo rv" style="margin:0">
+      <img src="posture.jpg" alt="施術者がお客様の立ち姿勢を横から確認している様子" loading="lazy" width="1200" height="900">
+      <figcaption><b>初回は30分の検査・カウンセリング</b>立ち姿勢や動きを確認し、写真で一緒に振り返ります。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 選ばれる理由 ===== -->
+<section class="sec" id="reason">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="en">Reason</span><h2>こもれびが大切にしている3つのこと</h2></div>
+    <div class="reasons">
+      <div class="reason rv">
+        <div class="reason-img"><img src="counsel.jpg" alt="カウンセリングの様子" loading="lazy" width="1200" height="900"></div>
+        <div>
+          <div class="reason-num">01</div>
+          <h3>見て、説明して、納得してから施術します</h3>
+          <p>姿勢写真と動きのチェックで、からだの状態を「見える化」します。何をするのか、なぜそうするのかを説明し、ご納得いただいてから施術に入ります。</p>
+          <ul><li>姿勢写真の撮影</li><li>可動域チェック</li><li>生活習慣のヒアリング</li></ul>
+        </div>
+      </div>
+      <div class="reason rv">
+        <div class="reason-img"><img src="hands.jpg" alt="背中にそっと手を添えるやさしい施術" loading="lazy" width="1200" height="900"></div>
+        <div>
+          <div class="reason-num">02</div>
+          <h3>ボキボキしない、やさしい手技。完全個室です</h3>
+          <p>強い力で押したり、首を急にひねったりする施術は行いません。整体が初めての方や、強い刺激が苦手な方にも受けていただけます。人目を気にせず過ごせる完全個室です。</p>
+          <ul><li>ソフトな手技</li><li>完全個室</li><li>お着替えあり</li></ul>
+        </div>
+      </div>
+      <div class="reason rv">
+        <div class="reason-img"><img src="selfcare.jpg" alt="自宅でストレッチをする女性" loading="lazy" width="1200" height="900"></div>
+        <div>
+          <div class="reason-num">03</div>
+          <h3>通い続けなくていい状態を、一緒に目指します</h3>
+          <p>デスクでできる1日3分のセルフケアを、お一人おひとりに合わせてお伝えします。来院の間隔を少しずつ空けていけることを、私たちの目標にしています。</p>
+          <ul><li>個別のセルフケア指導</li><li>LINEで質問OK</li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mid-cta rv">
+      <div><h3>まずは、からだの状態を知るところから。</h3><p>初回は検査・カウンセリング込み60分 3,980円。無理な回数券のおすすめはしません。</p></div>
+      <a class="btn btn-cta" href="#access">空き状況を見る <span class="arrow"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2l4 4-4 4" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== お客様の声 ===== -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="en">Voice</span><h2>ご来院いただいた方の声</h2><p>実際の制作時は、アンケート用紙や許可をいただいたお写真とともに掲載します。</p></div>
+    <div class="voices">
+      <article class="voice rv">
+        <div class="voice-who"><div class="voice-ava">K</div><div><b>K.Sさん</b><small>30代・事務職・〇〇市</small></div></div>
+        <dl>
+          <dt>来院前のお悩み</dt><dd>夕方になると肩が張って、パソコン作業に集中できませんでした。</dd>
+          <dt>実際に受けてみて</dt><dd>姿勢の写真を見せてもらい、自分の座り方のクセがよく分かりました。教わったストレッチを昼休みに続けています。</dd>
+        </dl>
+        <p class="voice-disclaimer">※ 個人の感想であり、感じ方には個人差があります。</p>
+      </article>
+      <article class="voice rv">
+        <div class="voice-who"><div class="voice-ava">T</div><div><b>T.Mさん</b><small>40代・エンジニア・〇〇区</small></div></div>
+        <dl>
+          <dt>来院前のお悩み</dt><dd>在宅勤務になってから首まわりのこわばりが気になるようになりました。</dd>
+          <dt>実際に受けてみて</dt><dd>強く押されることがなく、想像よりずっとリラックスできました。説明が丁寧で、何をされているのか分かるのが安心です。</dd>
+        </dl>
+        <p class="voice-disclaimer">※ 個人の感想であり、感じ方には個人差があります。</p>
+      </article>
+      <article class="voice rv">
+        <div class="voice-who"><div class="voice-ava">Y</div><div><b>Y.Aさん</b><small>50代・自営業・〇〇市</small></div></div>
+        <dl>
+          <dt>来院前のお悩み</dt><dd>整体は初めてで、勧誘されないか少し不安でした。</dd>
+          <dt>実際に受けてみて</dt><dd>回数券を勧められることもなく、自分のペースで通えています。夜21時までなので仕事帰りに寄れるのも助かります。</dd>
+        </dl>
+        <p class="voice-disclaimer">※ 個人の感想であり、感じ方には個人差があります。</p>
+      </article>
+    </div>
+    <p class="note voice-note">※ 掲載している声は、制作サンプル用の例文です。</p>
+  </div>
+</section>
+
+<!-- ===== 院長 ===== -->
+<section class="sec">
+  <div class="wrap greet">
+    <div class="greet-photo rv">
+      <img src="staff.jpg" alt="院長の写真" loading="lazy" width="900" height="1125">
+      <div class="greet-name"><small>院長（架空の人物・AI生成）</small><b>木下 陽介</b></div>
+    </div>
+    <div class="rv">
+      <span class="en">Message</span>
+      <h3>「その場しのぎ」で終わらせない整体を。</h3>
+      <p>私自身、前職のIT企業で長時間のデスクワークを続けるうちに、ひどい肩こりと頭の重さに悩まされていました。マッサージに通っても、数日で元通り。そんな毎日を変えたいと思ったのが、この道に進んだきっかけです。</p>
+      <p>整体の仕事を始めてから大切にしているのは、「なぜつらくなるのか」をお客様と一緒に理解することです。原因が分かると、日常で気をつけることも見えてきます。</p>
+      <p>こもれびは、仕事を頑張る方が、ほっと一息つける場所でありたいと考えています。まずはお気軽にご相談ください。</p>
+      <dl class="profile">
+        <dt>経歴</dt><dd>IT企業勤務を経て整体の道へ。整体院勤務7年を経て開業</dd>
+        <dt>得意なこと</dt><dd>デスクワークによる肩・首まわりの不調のご相談、姿勢のチェック</dd>
+        <dt>休日の過ごし方</dt><dd>近所の公園を散歩すること、コーヒーを淹れること</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 料金 ===== -->
+<section class="sec alt" id="price">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="en">Price</span><h2>料金のご案内</h2><p>表示はすべて税込です。施術後に追加料金が発生することはありません。</p></div>
+    <div class="price">
+      <div class="price-main rv">
+        <span class="ribbon">はじめての方</span>
+        <h3>初回 体験コース</h3>
+        <p class="sub">検査・カウンセリング（約30分）＋ 施術（約30分）</p>
+        <div class="price-big"><b>3,980</b><span>円</span></div>
+        <ul class="price-incl">
+          <li>姿勢写真の撮影・説明</li><li>可動域・動きのチェック</li><li>やさしい手技の施術</li><li>個別のセルフケア指導</li>
+        </ul>
+        <a class="btn btn-cta" href="#access" style="width:100%">空き状況を見て予約する</a>
+      </div>
+      <div class="price-side rv">
+        <h3 style="font-size:18px">2回目以降</h3>
+        <div class="price-row"><span>通常コース（約45分）</span><b>6,600円</b></div>
+        <div class="price-row"><span>しっかりコース（約70分）</span><b>9,900円</b></div>
+        <p class="note">ご来院の頻度は、状態をお伺いしたうえでご提案します。決めるのはお客様ご自身です。</p>
+        <p class="promise">回数券やコース契約の無理なおすすめは一切いたしません。1回ごとのお支払いでご利用いただけます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 流れ ===== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="en">Flow</span><h2>ご来院の流れ</h2></div>
+    <div class="flow">
+      <div class="step rv"><div class="step-img"><img src="reception.jpg" alt="受付でお客様をお迎えする様子" loading="lazy" width="1200" height="900"></div><div class="step-body"><h3>ご予約・ご来院</h3><p>WEBから24時間受付。当日はお着替えをご用意しています。</p></div></div>
+      <div class="step rv"><div class="step-img"><img src="posture.jpg" alt="姿勢の検査" loading="lazy" width="1200" height="900"></div><div class="step-body"><h3>カウンセリング・検査</h3><p>お悩みや生活習慣を伺い、姿勢と動きを確認します。</p></div></div>
+      <div class="step rv"><div class="step-img"><img src="room.jpg" alt="完全個室の施術室" loading="lazy" width="1200" height="900"></div><div class="step-body"><h3>施術</h3><p>説明にご納得いただいてから、完全個室でやさしく整えます。</p></div></div>
+      <div class="step rv"><div class="step-img"><img src="selfcare.jpg" alt="セルフケア" loading="lazy" width="1200" height="900"></div><div class="step-body"><h3>セルフケアのご提案</h3><p>ご自宅や職場でできるケアをお伝えします。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec alt">
+  <div class="wrap narrow">
+    <div class="sec-head rv"><span class="en">FAQ</span><h2>よくあるご質問</h2></div>
+    <div class="faq rv">
+      <details><summary>無理な勧誘や、回数券のおすすめはありますか？</summary><p class="a">ありません。1回ごとのお支払いでご利用いただけます。通院のペースは目安をお伝えしますが、決めるのはお客様ご自身です。</p></details>
+      <details><summary>整体は初めてで、痛いのが不安です。</summary><p class="a">強い力で押したり、首を急にひねったりする施術は行いません。施術中も強さを確認しながら進めますので、遠慮なくお伝えください。</p></details>
+      <details><summary>服装はどうすればいいですか？</summary><p class="a">お着替えをご用意しています。仕事帰りのスーツのままでもお越しいただけます。</p></details>
+      <details><summary>どのくらいの頻度で通えばいいですか？</summary><p class="a">からだの状態や生活スタイルによって異なります。初回の検査後に目安をご提案しますので、ご都合に合わせてご検討ください。</p></details>
+      <details><summary>病院に通っていても受けられますか？</summary><p class="a">治療中の症状がある方や、強い痛み・しびれがある方は、まず医療機関での受診をおすすめしています。ご不安な点はご予約時にご相談ください。</p></details>
+      <details><summary>キャンセルはできますか？</summary><p class="a">前日までのご連絡でしたら、キャンセル料はかかりません。当日のご変更もLINEでご相談ください。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== アクセス・空き状況 ===== -->
+<section class="sec" id="access">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="en">Access</span><h2>空き状況・アクセス</h2></div>
+    <div class="access">
+      <div class="rv">
+        <div class="slots">
+          <h3>今週の空き状況<small>※ サンプル表示</small></h3>
+          <table aria-label="今週の空き状況">
+            <thead><tr><th></th><th><b>月</b>10/26</th><th><b>火</b>10/27</th><th><b>水</b>休</th><th><b>木</b>10/29</th><th><b>金</b>10/30</th><th class="sat"><b>土</b>10/31</th><th class="sun"><b>日</b>11/1</th></tr></thead>
+            <tbody>
+              <tr><td>午前</td><td class="o">◎</td><td class="t">△</td><td class="x">－</td><td class="o">◎</td><td class="o">◎</td><td class="x">×</td><td class="t">△</td></tr>
+              <tr><td>午後</td><td class="o">◎</td><td class="o">◎</td><td class="x">－</td><td class="t">△</td><td class="o">◎</td><td class="t">△</td><td class="o">◎</td></tr>
+              <tr><td>夜</td><td class="t">△</td><td class="x">×</td><td class="x">－</td><td class="o">◎</td><td class="t">△</td><td class="x">×</td><td class="x">－</td></tr>
+            </tbody>
+          </table>
+          <p class="legend">◎ 空きあり　△ 残りわずか　× 満席　（実際の制作では予約システムと連携します）</p>
+          <a class="btn btn-cta" href="#access" style="width:100%;margin-top:18px"><span class="stack" style="text-align:center">WEBで予約する<small>24時間受付・1分で完了</small></span></a>
+          <p class="note" style="text-align:center;margin-top:12px">お電話：<a class="tel-link" href="tel:000-0000-0000">000-0000-0000</a>（施術中は出られない場合があります）</p>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="access-photo"><img src="exterior.jpg" alt="緑ののれんがかかった入口" loading="lazy" width="1200" height="900"></div>
+        <dl class="info">
+          <dt>住所</dt><dd>〇〇県〇〇市〇〇町1-2-3（架空）</dd>
+          <dt>アクセス</dt><dd>〇〇駅 東口から徒歩3分。緑ののれんが目印です</dd>
+          <dt>受付時間</dt><dd>10:00〜21:00（最終受付20:00）</dd>
+          <dt>定休日</dt><dd>水曜日</dd>
+          <dt>駐車場</dt><dd>なし（近隣にコインパーキングあり）</dd>
+        </dl>
+        <div class="map">Googleマップ埋め込みエリア</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 最終CTA ===== -->
+<section class="final">
+  <span class="en" style="color:#e9dfc9">Reservation</span>
+  <h2 style="margin-top:12px">からだのこと、<br>一度ゆっくり話してみませんか。</h2>
+  <p>初回は検査・カウンセリング込みの60分。<br>無理な勧誘はいたしませんので、安心してお越しください。</p>
+  <a class="btn btn-cta" href="#access"><span class="stack">空き状況を見て予約する<small>初回 3,980円（税込）</small></span><span class="arrow"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2l4 4-4 4" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></span></a>
+  <div><a class="tel-link" href="tel:000-0000-0000">お電話：000-0000-0000</a></div>
+</section>
+
+</main>
+
+<footer>
+  <b>からだ整え処 こもれび</b><br>
+  〇〇県〇〇市〇〇町1-2-3（架空）<br>
+  ※ 当院は整体院であり、医療機関ではありません。施術は医療行為ではなく、効果には個人差があります。<br>
+  ※ 本ページは制作サンプルです。店舗・人物・写真（AI生成）はすべて架空のものです。
+</footer>
+
+<nav class="sp-bar" id="spbar" aria-label="予約・お問い合わせ">
+  <a class="sub" href="tel:000-0000-0000"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>電話</a>
+  <a class="sub" href="#access"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5C21 7 17 4 12 4S3 7 3 11.5c0 4 3.2 7 7.6 7.4L12 21l1.6-2.1C18 18.4 21 15.4 21 11.5Z"/></svg>LINE</a>
+  <a class="main" href="#access">空き状況を見て予約<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2l4 4-4 4" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></a>
+</nav>
+
+<script>
+  // スクロールで要素をふわっと表示
+  document.documentElement.classList.add('js');
+  const io = new IntersectionObserver((es) => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  // ヘッダーの境界線と、スマホ固定バーの表示
+  const hd = document.getElementById('hd'), bar = document.getElementById('spbar');
+  const onScroll = () => {
+    const y = window.scrollY;
+    hd.classList.toggle('scrolled', y > 8);
+    bar.classList.toggle('show', y > window.innerHeight * 0.6);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
+</body>
+</html>
