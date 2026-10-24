@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>冬期講習2026受付中｜中学生専門の個別指導 ひだまり学習室（制作サンプル）</title>
+<meta name="description" content="東みどり町の中学生専門・1対2の個別指導塾。冬期講習は12/24〜1/7の全10日間、料金は教材費込みで税込14,300円から。無料体験あり、入塾の判断は体験後で大丈夫です。※架空の塾を想定した制作サンプルです。">
+<meta name="theme-color" content="#2b5ea7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Klee+One:wght@600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fbfaf6;     /* ノートの紙色 */
+  --sky:#eef4fb;       /* 交互背景の淡い青 */
+  --sky2:#dfeaf7;
+  --blue:#2b5ea7;      /* 基調色（信頼・誠実） */
+  --blue-deep:#1b3a68;
+  --ink:#1e2a3b;
+  --muted:#586477;
+  --line:#dbe3ee;
+  --marker:#ffe270;    /* 蛍光ペン */
+  --sun:#f5b23a;
+  --cta:#e4570f;       /* 申込ボタンだけに使う色 */
+  --cta-deep:#c24808;
+  --pen:#d2433b;       /* 赤ペン（注記・休み表示） */
+  --white:#fff;
+  --r:16px;
+  --shadow:0 20px 44px -26px rgba(27,58,104,.42);
+  --grid:linear-gradient(rgba(43,94,167,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(43,94,167,.075) 1px,transparent 1px);
+  --num:"Outfit","Zen Kaku Gothic New",sans-serif;
+  --hand:"Klee One","Zen Kaku Gothic New",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;font-size:16px;line-height:1.9;letter-spacing:.03em;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.narrow{max-width:860px}
+h1,h2,h3{line-height:1.45;margin:0;font-weight:900;word-break:auto-phrase;text-wrap:balance}
+p{margin:0}
+.nw{display:inline-block}
+.mk{background:linear-gradient(transparent 62%,var(--marker) 62%);padding:0 .08em}
+.note{font-size:13px;color:var(--muted);line-height:1.75}
+.hand{font-family:var(--hand);font-weight:600}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- 共通 ---------- */
+.sec{padding:100px 0;position:relative}
+.sec.sky{background:var(--sky)}
+.sec.grid{background-color:var(--paper);background-image:var(--grid);background-size:26px 26px}
+.sec-head{text-align:center;margin-bottom:54px}
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-family:var(--num);font-weight:600;font-size:13px;letter-spacing:.18em;color:var(--blue);text-transform:uppercase}
+.sec-label::before{content:"";width:18px;height:3px;border-radius:2px;background:var(--sun)}
+.sec-head h2{font-size:clamp(25px,3.3vw,36px);margin-top:12px;letter-spacing:.04em}
+.sec-head p{color:var(--muted);margin-top:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;font-weight:700;border-radius:999px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:none}
+.btn-cta{background:var(--cta);color:#fff;padding:17px 30px 17px 34px;font-size:18px;box-shadow:0 5px 0 var(--cta-deep),0 16px 28px -14px rgba(228,87,15,.75)}
+.btn-cta:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--cta-deep),0 12px 22px -14px rgba(228,87,15,.75)}
+.btn-cta .stack{display:flex;flex-direction:column;line-height:1.35;text-align:left}
+.btn-cta small{font-size:12px;font-weight:500;opacity:.95;letter-spacing:.02em}
+.arrow{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;flex:none}
+.btn-ghost{color:var(--blue-deep);background:var(--white);border:2px solid var(--sky2);padding:13px 22px;font-size:15px}
+.btn-ghost:hover{border-color:var(--blue)}
+.tel{font-family:var(--num);font-weight:600;letter-spacing:.04em;text-decoration:none}
+
+/* スクロールでふわっと表示（JSが動く時だけ） */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+.fv-grid>*,.feature>*,.sched>*,.courses>*,.teachers>*,.access>*,.entry-grid>*,.worries>*,.voices>*,.flow>*,.key-grid>*{min-width:0}
+
+/* ---------- サンプル表記 ---------- */
+.sample-bar{background:var(--blue-deep);color:#e8eef8;font-size:12px;text-align:center;padding:7px 14px;letter-spacing:.03em;line-height:1.6}
+
+/* ---------- ヘッダー ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.scrolled{border-color:var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.logo svg{flex:none}
+.logo-txt{line-height:1.25}
+.logo-txt small{display:block;font-size:11px;color:var(--muted);letter-spacing:.08em}
+.logo-txt b{font-size:20px;letter-spacing:.08em;color:var(--blue-deep);font-weight:900}
+.hd-nav{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:500}
+.hd-nav a.l{text-decoration:none;color:var(--muted)}
+.hd-nav a.l:hover{color:var(--blue)}
+.hd-tel{line-height:1.25;text-align:right}
+.hd-tel small{display:block;font-size:11px;color:var(--muted)}
+.hd-tel .tel{font-size:18px;color:var(--blue-deep)}
+.hd .btn-cta{padding:11px 20px;font-size:14px;box-shadow:0 4px 0 var(--cta-deep)}
+
+/* ---------- ファーストビュー ---------- */
+.fv{position:relative;background-color:var(--paper);background-image:var(--grid);background-size:26px 26px;overflow:hidden;padding:56px 0 72px}
+.fv::after{content:"";position:absolute;right:-180px;top:-160px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(245,178,58,.22),rgba(245,178,58,0) 68%);pointer-events:none}
+.fv-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:48px;align-items:center;position:relative;z-index:1}
+.fv-tag{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:var(--blue-deep)}
+.fv-tag span{background:var(--blue);color:#fff;border-radius:6px;padding:3px 10px;font-size:13px;letter-spacing:.06em}
+.fv-season{display:flex;align-items:center;gap:10px;margin-top:22px;font-weight:700;font-size:15px;color:var(--blue)}
+.fv-season b{font-family:var(--num);font-size:15px;letter-spacing:.1em}
+.fv-season i{font-style:normal;background:var(--white);border:1.5px solid var(--sky2);color:var(--blue-deep);border-radius:999px;padding:2px 12px;font-size:13px}
+.fv h1{font-size:clamp(30px,3.6vw,46px);margin:14px 0 20px;letter-spacing:.03em;line-height:1.38;color:var(--ink)}
+.fv h1 .small{display:block;font-size:.5em;font-weight:700;color:var(--muted);letter-spacing:.06em;margin-bottom:6px}
+.fv-lead{color:var(--muted);font-size:16.5px;max-width:520px}
+.fv-points{list-style:none;margin:26px 0 30px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:560px}
+.fv-points li{background:var(--white);border:1.5px solid var(--line);border-radius:14px;padding:12px 12px 12px;line-height:1.4;font-size:12.5px;color:var(--muted);box-shadow:var(--shadow)}
+.fv-points b{display:block;font-size:17px;color:var(--blue-deep);margin-bottom:3px;letter-spacing:.02em}
+.fv-points b em{font-style:normal;font-family:var(--num);font-size:22px;color:var(--blue)}
+.fv-cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.fv-deadline{margin-top:18px;font-size:14px;color:var(--muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.fv-deadline b{color:var(--pen);font-size:15px}
+.fv-visual{position:relative;margin:0}
+.fv-photo{border-radius:28px;overflow:hidden;aspect-ratio:1/1.04;box-shadow:0 30px 60px -30px rgba(27,58,104,.55);border:8px solid var(--white)}
+.fv-photo img{width:100%;height:100%;object-fit:cover;object-position:96% center}
+.sticky{position:absolute;top:-18px;left:-26px;background:var(--marker);color:var(--ink);width:150px;padding:16px 14px 14px;text-align:center;transform:rotate(-5deg);box-shadow:0 14px 24px -14px rgba(0,0,0,.35);line-height:1.35;font-weight:700;font-size:13px}
+.sticky::before{content:"";position:absolute;top:-10px;left:50%;width:62px;height:20px;margin-left:-31px;background:rgba(255,255,255,.6);transform:rotate(3deg)}
+.sticky b{display:block;font-family:var(--num);font-size:34px;line-height:1.1;color:var(--pen);letter-spacing:.02em}
+.fv-voice{position:absolute;right:-14px;bottom:-30px;display:flex;align-items:center;gap:12px;background:var(--white);border-radius:18px;padding:12px 18px 12px 12px;box-shadow:var(--shadow);max-width:330px;border:1px solid var(--line)}
+.fv-voice img{width:62px;height:62px;border-radius:50%;object-fit:cover;object-position:center 18%;flex:none}
+.fv-voice p{font-size:14.5px;line-height:1.55;color:var(--blue-deep)}
+.fv-voice small{display:block;font-size:11.5px;color:var(--muted);margin-top:4px;font-family:inherit}
+
+/* ---------- 講習のキー情報 ---------- */
+.key{background:var(--blue);color:#fff;position:relative;z-index:2}
+.key-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.key-item{padding:22px 22px 22px 0;display:flex;gap:14px;align-items:center;line-height:1.45}
+.key-item+.key-item{padding-left:24px;border-left:1px solid rgba(255,255,255,.18)}
+.key-item svg{flex:none;opacity:.9}
+.key-item small{display:block;font-size:12px;opacity:.78;letter-spacing:.08em}
+.key-item b{font-size:16.5px;letter-spacing:.02em}
+.key-item span{font-size:12px;opacity:.85;display:block}
+
+/* ---------- お悩み ---------- */
+.worries{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.worry-card{background:var(--white);border-radius:22px;padding:34px 34px 30px;border:1px solid var(--line);position:relative;box-shadow:var(--shadow)}
+.worry-card h3{font-size:19px;display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.worry-ico{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex:none}
+.worry-card.parent .worry-ico{background:var(--sky)}
+.worry-card.child .worry-ico{background:#fff4d6}
+.worry-card ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.worry-card li{padding:12px 0 12px 34px;position:relative;border-bottom:1px dashed var(--line);font-weight:500}
+.worry-card li:last-child{border:none}
+.worry-card li::before{content:"";position:absolute;left:2px;top:16px;width:20px;height:20px;border-radius:5px;border:2px solid var(--blue)}
+.worry-card li::after{content:"";position:absolute;left:8px;top:18px;width:7px;height:12px;border-right:3px solid var(--pen);border-bottom:3px solid var(--pen);transform:rotate(40deg)}
+.worry-card.child li{font-family:var(--hand);font-size:16.5px}
+.bridge{margin-top:56px;text-align:center}
+.bridge-arrow{width:2px;height:44px;background:repeating-linear-gradient(var(--blue) 0 6px,transparent 6px 12px);margin:0 auto 22px}
+.bridge h3{font-size:clamp(21px,2.8vw,29px);letter-spacing:.04em}
+.bridge p{color:var(--muted);margin-top:12px}
+
+/* ---------- 指導の特徴 ---------- */
+.features{display:grid;gap:80px}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.feature:nth-child(even) .feature-img{order:2}
+.feature-img{position:relative}
+.feature-img img{border-radius:22px;aspect-ratio:4/3;object-fit:cover;width:100%;box-shadow:var(--shadow)}
+.feature-img .memo{position:absolute;right:-16px;bottom:-22px;background:var(--white);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow);font-size:14px;color:var(--blue-deep);white-space:nowrap;line-height:1.55;border:1px solid var(--line)}
+.feature:nth-child(even) .feature-img .memo{right:auto;left:-16px}
+.f-num{font-family:var(--num);font-weight:700;font-size:15px;color:var(--blue);letter-spacing:.16em;display:flex;align-items:center;gap:10px}
+.f-num b{font-size:46px;line-height:1;color:var(--sky2);-webkit-text-stroke:1.5px var(--blue);letter-spacing:0}
+.feature h3{font-size:clamp(21px,2.5vw,27px);margin:12px 0 16px}
+.feature p{color:var(--muted)}
+.feature ul{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.feature ul li{font-size:13px;background:var(--white);border:1px solid var(--sky2);color:var(--blue-deep);padding:4px 13px;border-radius:999px;font-weight:700}
+.mock{border-radius:22px;background-color:var(--white);background-image:var(--grid);background-size:22px 22px;display:grid;place-items:center;position:relative;box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line);padding:44px 24px;min-height:380px}
+.diag{width:min(400px,100%);background:#fff;border-radius:10px;box-shadow:0 22px 34px -20px rgba(27,58,104,.55);padding:18px 22px 16px;transform:rotate(-1.8deg);border-top:6px solid var(--blue)}
+.diag-head{display:flex;justify-content:space-between;gap:10px;font-size:13px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:4px}
+.diag-head b{color:var(--blue-deep)}.diag-head span{color:var(--muted);white-space:nowrap}
+.diag-list{list-style:none;margin:0;padding:0}
+.diag-list li{display:grid;grid-template-columns:38px 1fr auto 26px;align-items:center;gap:8px;padding:6px 4px;border-bottom:1px dashed var(--line);font-size:14px;font-weight:700;position:relative}
+.diag-list .g{font-size:11px;background:var(--sky);color:var(--blue-deep);border-radius:4px;text-align:center;line-height:1.7}
+.diag-list i{font-style:normal;font-family:var(--hand);font-size:19px;text-align:center;line-height:1;grid-column:4}
+.diag-list li.ok i{color:var(--blue)}.diag-list li.ng i{color:var(--pen)}
+.diag-list li.na{color:#9aa6b6}
+.diag-list li.start::after{content:"";position:absolute;inset:-1px -6px;border:2px solid var(--pen);border-radius:50%;transform:rotate(-1.2deg);pointer-events:none}
+.diag-list em{font-style:normal;color:var(--pen);font-size:13.5px;grid-column:3}
+.diag-foot{margin-top:10px;font-size:14px;color:var(--blue-deep);line-height:1.6}
+.mock.ph{padding:0;min-height:400px;align-items:start}
+.mock.ph::before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:var(--sky2);left:50%;top:50%;margin:-150px 0 0 -150px}
+.phone{position:relative;margin-top:34px;width:250px;border-radius:36px;background:#1e2a3b;padding:9px;box-shadow:0 30px 50px -24px rgba(27,58,104,.6)}
+.phone-screen{background:#eef2f7;border-radius:28px;height:420px;padding:16px 12px;display:flex;flex-direction:column;gap:8px;font-size:12px;line-height:1.6;overflow:hidden}
+.ph-top{text-align:center;font-weight:700;font-size:12.5px;color:var(--blue-deep);padding-bottom:8px;border-bottom:1px solid #dde4ee}
+.ph-date{align-self:center;background:#dde5ef;border-radius:99px;padding:0 10px;font-size:10.5px;color:var(--muted)}
+.bubble{background:#fff;border-radius:4px 14px 14px 14px;padding:9px 11px;max-width:92%;box-shadow:0 2px 6px rgba(27,58,104,.06)}
+.bubble b{display:block;color:var(--blue);font-size:12px;margin-bottom:2px}
+.bubble .k{display:block;font-weight:700;font-size:11px;color:var(--muted);margin-top:4px}
+.bubble.me{align-self:flex-end;background:var(--blue);color:#fff;border-radius:14px 4px 14px 14px}
+.report{margin-top:20px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:14px;line-height:1.7;position:relative}
+.report-h{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:8px}
+.report dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px}
+.report dt{font-weight:700;color:var(--blue);font-size:12.5px;padding-top:1px}
+.report dd{margin:0;font-family:var(--hand);font-size:15px}
+
+/* ---------- 日程 ---------- */
+.sched{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:start}
+.card{background:var(--white);border-radius:22px;border:1px solid var(--line);padding:32px;box-shadow:var(--shadow)}
+.card h3{font-size:19px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.card h3 small{font-size:13px;color:var(--muted);font-weight:500}
+.cal{width:100%;border-collapse:separate;border-spacing:6px;margin-top:14px;table-layout:fixed}
+.cal th{font-size:12px;color:var(--muted);font-weight:700;padding:4px 0}
+.cal th.sun{color:var(--pen)}.cal th.sat{color:var(--blue)}
+.cal td{height:64px;border-radius:12px;vertical-align:top;padding:6px 8px;font-family:var(--num);font-weight:600;font-size:15px;background:#f6f8fb;color:#9aa6b6;position:relative;line-height:1.2}
+.cal td small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:10.5px;font-weight:700;margin-top:6px;letter-spacing:0}
+.cal td.on{background:var(--blue);color:#fff}
+.cal td.on small{color:#dbe7f7}
+.cal td.on.half{background:linear-gradient(135deg,var(--blue) 0 72%,#5d87c4 72%)}
+.cal td.off{background:#fff;border:1.5px dashed #e6c9c6;color:var(--pen)}
+.cal td .m{font-size:10px;display:block;opacity:.8}
+.cal-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin-top:12px}
+.cal-legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.term{background:var(--sky);border-radius:14px;padding:14px 16px;line-height:1.5}
+.term small{font-size:12px;color:var(--muted);display:block}
+.term b{font-size:16px;color:var(--blue-deep)}
+.slots{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px}
+.slots li{display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:12px;padding:10px 14px;border-radius:12px;background:#f6f8fb}
+.slots .no{width:30px;height:30px;border-radius:50%;background:var(--white);border:2px solid var(--blue);color:var(--blue);display:grid;place-items:center;font-family:var(--num);font-weight:700;font-size:14px}
+.slots .t{font-family:var(--num);font-weight:600;font-size:17px;letter-spacing:.03em}
+.slots .tag{font-size:11.5px;font-weight:700;color:var(--blue-deep);background:var(--white);border-radius:999px;padding:2px 10px;white-space:nowrap}
+.sched-note{margin-top:18px;background:#fff8e1;border-radius:12px;padding:14px 16px;font-size:13.5px;line-height:1.7}
+.sched-note b{color:var(--ink)}
+
+/* ---------- 料金 ---------- */
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.course{background:var(--white);border-radius:22px;border:1.5px solid var(--line);padding:30px 26px 26px;display:flex;flex-direction:column;position:relative;box-shadow:var(--shadow)}
+.course.main{border:2.5px solid var(--blue)}
+.course .badge{position:absolute;top:-14px;left:24px;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;padding:3px 14px;border-radius:999px;letter-spacing:.04em}
+.course .grade{display:inline-block;font-size:12.5px;font-weight:700;color:var(--blue-deep);background:var(--sky);padding:2px 12px;border-radius:6px;align-self:flex-start}
+.course h3{font-size:21px;margin:12px 0 4px}
+.course .what{font-size:13.5px;color:var(--muted);line-height:1.7;min-height:3.4em}
+.total{margin:18px 0 6px;padding-top:16px;border-top:1px solid var(--line)}
+.total small{display:block;font-size:12.5px;color:var(--muted);font-weight:700}
+.total b{font-family:var(--num);font-size:44px;font-weight:700;color:var(--blue-deep);letter-spacing:-.01em;line-height:1.15}
+.total b span{font-size:17px;font-family:"Zen Kaku Gothic New";margin-left:2px}
+.total b em{font-style:normal;font-size:13px;font-family:"Zen Kaku Gothic New";color:var(--muted);margin-left:6px;font-weight:700}
+.breakdown{list-style:none;margin:6px 0 18px;padding:0;font-size:13.5px}
+.breakdown li{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.breakdown li span:last-child{font-family:var(--num);font-weight:600;white-space:nowrap}
+.breakdown li.zero span:last-child{color:var(--blue)}
+.course .btn-cta{margin-top:auto;width:100%;font-size:16px;padding:14px 20px}
+.price-notes{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pn{display:flex;gap:12px;align-items:flex-start;background:var(--white);border-radius:14px;padding:16px 18px;border:1px solid var(--line);font-size:14px;line-height:1.65}
+.pn svg{flex:none;margin-top:2px}
+.pn b{display:block;color:var(--blue-deep)}
+.regular{margin-top:30px;background:var(--white);border-radius:18px;border:1px solid var(--line);overflow:hidden}
+.regular summary{cursor:pointer;list-style:none;padding:20px 60px 20px 24px;font-weight:700;position:relative}
+.regular summary::-webkit-details-marker{display:none}
+.regular summary small{font-weight:500;color:var(--muted);font-size:13px;margin-left:8px}
+.regular summary::after{content:"";position:absolute;right:26px;top:50%;width:11px;height:11px;margin-top:-8px;border-right:2.5px solid var(--blue);border-bottom:2.5px solid var(--blue);transform:rotate(45deg);transition:transform .25s}
+.regular[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
+.regular-body{padding:0 24px 24px}
+.tbl-wrap{overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:440px}
+.tbl th,.tbl td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left}
+.tbl thead th{background:var(--sky);color:var(--blue-deep);font-size:13px}
+.tbl td.n{font-family:var(--num);font-weight:600;white-space:nowrap}
+.legal{margin-top:16px;background:#f6f8fb;border-radius:12px;padding:14px 16px;font-size:12.5px;color:var(--muted);line-height:1.75}
+
+/* ---------- 講師 ---------- */
+.teachers{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:stretch}
+.t-card{background:var(--white);border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);display:grid;grid-template-columns:.78fr 1.22fr}
+.t-card.sub{grid-template-columns:1fr}
+.t-photo{position:relative;min-height:100%}
+.t-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.t-card.sub .t-photo{height:300px}
+.t-card.sub .t-photo img{object-position:center 22%}
+.t-body{padding:30px 30px 28px}
+.t-role{font-size:12.5px;font-weight:700;color:var(--blue)}
+.t-name{font-size:24px;margin:2px 0 2px;letter-spacing:.1em}
+.t-name small{font-size:12px;color:var(--muted);letter-spacing:.06em;font-weight:500;margin-left:8px}
+.t-quote{margin:16px 0;font-family:var(--hand);font-size:18.5px;line-height:1.6;color:var(--blue-deep);padding-left:16px;border-left:3px solid var(--sun)}
+.t-body p{font-size:14.5px;color:var(--muted)}
+.t-prof{margin:18px 0 0;display:grid;gap:2px;font-size:13.5px;background:var(--sky);border-radius:12px;padding:12px 16px}
+.t-prof dt{font-weight:700;color:var(--blue-deep)}
+.t-prof dd{margin:0 0 6px;color:var(--muted)}.t-prof dd:last-child{margin:0}
+.fic{position:absolute;left:12px;bottom:12px;background:rgba(30,42,59,.72);color:#fff;font-size:11px;padding:3px 10px;border-radius:999px}
+
+/* ---------- 流れ ---------- */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s;position:relative}
+.step{background:var(--white);border-radius:18px;border:1px solid var(--line);padding:22px 18px 22px;position:relative;box-shadow:var(--shadow)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:18px;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--num);font-weight:700;display:grid;place-items:center;font-size:16px;box-shadow:0 0 0 5px var(--sky)}
+.step .ico{height:44px;display:flex;align-items:center;margin:8px 0 8px}
+.step h3{font-size:16.5px;margin-bottom:6px}
+.step .time{display:inline-block;font-size:12px;font-weight:700;color:var(--blue-deep);background:var(--sky);padding:1px 10px;border-radius:999px;margin-bottom:8px}
+.step p{font-size:13.5px;color:var(--muted);line-height:1.75}
+.step.key-step{border:2px solid var(--sun);background:#fffaf0}
+.promise{margin-top:36px;display:flex;gap:22px;align-items:center;background:var(--white);border-radius:22px;padding:26px 30px;border:2px solid var(--blue)}
+.promise-ico{width:64px;height:64px;border-radius:50%;background:var(--sky);display:grid;place-items:center;flex:none}
+.promise h3{font-size:20px}
+.promise p{color:var(--muted);font-size:14.5px;margin-top:4px}
+.bring{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;font-size:14px}
+.bring b{color:var(--blue-deep)}
+.bring span{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:4px 14px}
+
+/* ---------- 教室の様子 ---------- */
+.gallery{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:230px 230px;gap:14px}
+.gallery figure{margin:0;position:relative;border-radius:18px;overflow:hidden}
+.gallery figure:first-child{grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:12px;bottom:12px;right:12px;background:rgba(255,255,255,.94);border-radius:10px;padding:8px 12px;font-size:13px;line-height:1.5}
+.gallery figcaption b{color:var(--blue-deep);display:block;font-size:14px}
+.room-facts{margin-top:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.rf{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:13px;color:var(--muted);line-height:1.5}
+.rf b{display:block;font-size:16px;color:var(--blue-deep)}
+
+/* ---------- 声 ---------- */
+.voices{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.voice{background:var(--white);border-radius:20px;padding:28px 28px 22px;border:1px solid var(--line);display:flex;flex-direction:column;position:relative}
+.voice::before{content:"\201C";position:absolute;right:22px;top:6px;font-family:Georgia,serif;font-size:72px;color:var(--sky2);line-height:1}
+.voice-who{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.voice-ava{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-weight:900;flex:none;font-size:15px}
+.voice-ava.p{background:var(--sky);color:var(--blue)}
+.voice-ava.s{background:#fff4d6;color:#b07a0d}
+.voice-who b{display:block;font-size:15px;line-height:1.4}
+.voice-who small{color:var(--muted);font-size:12px}
+.voice p{font-size:15px}
+.voice-dis{margin-top:auto;padding-top:14px;font-size:12px;color:var(--muted);border-top:1px dashed var(--line)}
+.voice p+.voice-dis{margin-top:16px}
+.results-memo{margin-top:26px;border:1.5px dashed #b9c8de;border-radius:16px;padding:18px 22px;font-size:13.5px;color:var(--muted);line-height:1.8;background:rgba(255,255,255,.6)}
+.results-memo b{color:var(--blue-deep)}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:12px}
+.faq details{background:var(--white);border-radius:14px;border:1px solid var(--line);overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:19px 56px 19px 62px;position:relative;font-weight:700;line-height:1.6}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";position:absolute;left:18px;top:15px;width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--num);font-size:15px;display:grid;place-items:center;line-height:1}
+.faq summary::after{content:"";position:absolute;right:24px;top:50%;width:11px;height:11px;margin-top:-8px;border-right:2.5px solid var(--blue);border-bottom:2.5px solid var(--blue);transform:rotate(45deg);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
+.faq .a{padding:0 24px 22px 62px;color:var(--muted);position:relative;font-size:15px}
+.faq .a::before{content:"A";position:absolute;left:18px;top:-2px;width:30px;height:30px;border-radius:50%;background:#fff1e8;color:var(--cta);font-family:var(--num);font-weight:700;font-size:15px;display:grid;place-items:center;line-height:1}
+
+/* ---------- アクセス ---------- */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.map{border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#f4f1e8;box-shadow:var(--shadow)}
+.map svg{display:block;width:100%;height:auto}
+.info{margin:0;display:grid;grid-template-columns:104px 1fr;row-gap:0;font-size:15px}
+.info dt,.info dd{padding:14px 0;border-bottom:1px solid var(--line)}
+.info dt{color:var(--blue-deep);font-weight:700;font-size:14px}
+.info dd{margin:0}
+.info dd small{display:block;color:var(--muted);font-size:13px;line-height:1.6}
+
+/* ---------- 申込フォーム ---------- */
+.entry{background:linear-gradient(180deg,var(--blue) 0,var(--blue-deep) 100%);color:#fff;position:relative;overflow:hidden}
+.entry::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:26px 26px;pointer-events:none}
+.entry-grid{display:grid;grid-template-columns:.9fr 1.1fr;grid-template-areas:"intro form" "more form";grid-template-rows:auto 1fr;column-gap:56px;align-items:start;position:relative}
+.entry-intro{grid-area:intro}.entry-more{grid-area:more}.form-card{grid-area:form}
+.entry .sec-label{color:#cfe0f7}
+.entry h2{font-size:clamp(26px,3.3vw,36px);margin:12px 0 18px;letter-spacing:.04em}
+.entry-lead{opacity:.9}
+.entry-list{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:12px}
+.entry-list li{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px 16px;line-height:1.6;font-size:14.5px}
+.entry-list b{display:block;font-size:15.5px}
+.entry-list svg{flex:none;margin-top:3px}
+.entry-tel{margin-top:22px;font-size:14px;opacity:.92}
+.entry-tel .tel{font-size:24px;color:#fff;white-space:nowrap}
+.form-card{background:var(--white);color:var(--ink);border-radius:24px;padding:30px 30px 24px;box-shadow:0 30px 60px -28px rgba(0,0,0,.5)}
+.form-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.form-head b{font-size:18px;color:var(--blue-deep)}
+.form-head small{color:var(--muted);font-size:12.5px;font-family:var(--num);font-weight:600;white-space:nowrap}
+.form-sample{font-size:12px;color:var(--cta-deep);background:#fff4ec;border-radius:8px;padding:6px 10px;margin-top:10px;line-height:1.5}
+.steps-dots{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:12px 0 20px}
+.steps-dots i{height:6px;border-radius:99px;background:var(--sky2);transition:background .3s}
+.steps-dots i.on{background:var(--blue)}
+.q{display:none}
+.q.on{display:block;animation:qin .35s ease}
+@keyframes qin{from{opacity:.3;transform:translateX(12px)}to{opacity:1;transform:none}}
+.q h3{font-size:19px;color:var(--ink);margin-bottom:6px}
+.q .hint{font-size:13px;color:var(--muted);margin-bottom:16px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;justify-content:space-between;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-weight:700;font-size:16px;cursor:pointer;background:#fff;text-align:left;transition:border-color .15s,background .15s}
+.opt small{font-weight:500;color:var(--muted);font-size:12.5px}
+.opt:hover,.opt:focus-visible{border-color:var(--blue);background:var(--sky);outline:none}
+.opt.sel{border-color:var(--blue);background:var(--sky)}
+.field{display:grid;gap:6px;margin-bottom:16px}
+.field>label,.field>.lbl{font-size:14px;font-weight:700}
+.req,.opt-tag{font-style:normal;font-size:11px;padding:1px 7px;border-radius:4px;margin-left:8px;vertical-align:1px;font-weight:700}
+.req{background:var(--pen);color:#fff}
+.opt-tag{background:#eef1f5;color:var(--muted)}
+.field input[type=text],.field input[type=email],.field input[type=tel],.field select,.field textarea{padding:13px 14px;border:2px solid var(--line);border-radius:12px;width:100%;background:#fff;font-size:16px}
+.field textarea{min-height:84px;resize:vertical}
+.field select{appearance:none;-webkit-appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%232b5ea7' stroke-width='2'/%3E%3C/svg%3E") right 14px center no-repeat;padding-right:38px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);outline:none}
+.field .err{color:var(--pen);font-size:12.5px;min-height:0;font-weight:700}
+.field .err:empty{display:none}
+.row2{display:grid;grid-template-columns:1.3fr 1fr;gap:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chip span{display:inline-block;border:2px solid var(--line);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:700;transition:all .15s}
+.chip input:checked+span{border-color:var(--blue);background:var(--blue);color:#fff}
+.chip input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0}
+.seg span{display:block;text-align:center;border:2px solid var(--line);border-radius:12px;padding:10px;font-weight:700;font-size:15px}
+.seg input:checked+span{border-color:var(--blue);background:var(--sky);color:var(--blue-deep)}
+.seg input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+.btn-next{width:100%;background:var(--blue);color:#fff;padding:15px;font-size:16px;border-radius:999px;margin-top:6px}
+.btn-next:hover{background:var(--blue-deep)}
+.form-card .btn-cta{width:100%;font-size:17px;padding:15px 18px}
+.form-card .btn-cta .stack{text-align:center}
+.form-foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:10px;min-height:28px}
+.back{background:none;border:none;color:var(--muted);font-size:14px;cursor:pointer;padding:4px 0}
+.back[hidden]{display:none}
+.agree{font-size:12.5px;color:var(--muted);margin-top:10px;text-align:center;line-height:1.6}
+.done{text-align:center;padding:6px 0 4px}
+.done h3{font-size:21px;color:var(--blue-deep);margin:12px 0 10px}
+.sample-alert{background:#fff4ec;border:2px solid var(--cta);color:var(--cta-deep);border-radius:12px;padding:12px 14px;font-weight:900;font-size:16px}
+.done p{font-size:14px;color:var(--muted);margin-top:12px}
+.summary{text-align:left;margin:16px 0 0;background:var(--sky);border-radius:12px;padding:14px 16px;font-size:13.5px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px}
+.summary dt{font-weight:700;color:var(--blue-deep)}
+.summary dd{margin:0;word-break:break-all}
+.reset{margin-top:14px;background:none;border:none;color:var(--blue);text-decoration:underline;cursor:pointer;font-size:14px}
+
+/* ---------- フッター ---------- */
+footer{background:#152b4d;color:#c6d1e2;font-size:13px;padding:48px 0 56px;line-height:1.9}
+.ft{display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+footer b{color:#fff}
+.ft-name{font-size:18px;letter-spacing:.08em;display:block;margin-bottom:6px}
+.ft h4{margin:0 0 6px;color:#fff;font-size:14px}
+.ft-disc{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:12.5px;text-align:center}
+.ft-disc strong{color:#fff;font-weight:700}
+
+/* ---------- スマホ固定バー ---------- */
+.sp-bar{display:none}
+
+/* ---------- レスポンシブ ---------- */
+@media (max-width:1040px){
+  .hd-nav .l{display:none}
+  .flow{grid-template-columns:repeat(3,1fr);row-gap:30px}
+}
+@media (max-width:860px){
+  body{font-size:15px}
+  .sec{padding:72px 0}
+  .sec-head{margin-bottom:38px}
+  .hd{height:62px}
+  .hd-tel,.hd .btn-cta{display:none}
+  .logo-txt b{font-size:18px}
+  .fv{padding:28px 0 56px}
+  .fv-grid{grid-template-columns:1fr;gap:34px}
+  .fv-season{margin-top:16px;flex-wrap:wrap;gap:6px 10px}
+  .fv h1{margin:10px 0 14px;font-size:27px}
+  .fv-lead{font-size:15px}
+  .fv-points{margin:20px 0 22px;gap:8px}
+  .fv-points li{padding:10px 8px;font-size:11.5px;text-align:center}
+  .fv-points b{font-size:15px}
+  .fv-points b em{font-size:19px}
+  .fv-cta .btn-cta{width:100%;justify-content:space-between}
+  .fv-cta .btn-ghost{width:100%}
+  .fv-deadline{justify-content:center;font-size:13px}
+  .fv-visual{margin:0 6px}
+  .fv-photo{aspect-ratio:4/3;border-width:6px;border-radius:22px}
+  .sticky{width:116px;padding:12px 8px 10px;font-size:11.5px;left:-8px;top:-16px}
+  .sticky b{font-size:26px}
+  .fv-voice{position:relative;right:auto;bottom:auto;margin:-26px 10px 0;max-width:none}
+  .key-grid{grid-template-columns:1fr 1fr}
+  .key-item,.key-item+.key-item{padding:16px 10px;border-left:none}
+  .key-item:nth-child(even){padding-left:14px;border-left:1px solid rgba(255,255,255,.18)}
+  .key-item:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.18)}
+  .key-item svg{display:none}
+  .key-item b{font-size:15px}
+  .worries{grid-template-columns:1fr;gap:18px}
+  .worry-card{padding:26px 22px 20px}
+  .bridge{margin-top:40px}
+  .features{gap:64px}
+  .feature{grid-template-columns:1fr;gap:34px}
+  .feature:nth-child(even) .feature-img{order:0}
+  .feature-img .memo,.feature:nth-child(even) .feature-img .memo{right:10px;left:auto;bottom:-20px;font-size:13px;white-space:normal;max-width:calc(100% - 20px)}
+  .pc{display:none}
+  .terms{grid-template-columns:1fr}
+  .step .time{justify-self:start}
+  .regular summary small{display:block;margin:2px 0 0}
+  .sched{grid-template-columns:1fr;gap:20px}
+  .card{padding:24px 16px}
+  .cal{border-spacing:4px}
+  .cal td{height:56px;padding:5px 5px;font-size:14px;border-radius:9px}
+  .cal td small{font-size:9.5px;margin-top:4px}
+  .courses{grid-template-columns:1fr;gap:26px}
+  .course .what{min-height:0}
+  .price-notes{grid-template-columns:1fr}
+  .regular-body{padding:0 16px 20px}
+  .teachers{grid-template-columns:1fr}
+  .t-card{grid-template-columns:1fr}
+  .t-photo,.t-card.sub .t-photo{height:340px}
+  .t-body{padding:24px 22px}
+  .flow{grid-template-columns:1fr;gap:26px}
+  .step{display:grid;grid-template-columns:52px 1fr;column-gap:14px;padding:22px 18px 18px}
+  .step .ico{grid-row:span 4;margin:0;height:auto;align-items:flex-start;padding-top:6px}
+  .promise{flex-direction:column;align-items:flex-start;padding:22px 20px;gap:12px}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:210px 150px}
+  .gallery figure:first-child{grid-column:span 2;grid-row:auto}
+  .gallery figcaption{font-size:11.5px;padding:6px 9px;left:8px;right:8px;bottom:8px}
+  .gallery figcaption b{font-size:12.5px}
+  .room-facts{grid-template-columns:1fr 1fr}
+  .voices{grid-template-columns:1fr}
+  .access{grid-template-columns:1fr;gap:28px}
+  .info{grid-template-columns:88px 1fr;font-size:14.5px}
+  .entry-grid{grid-template-columns:1fr;grid-template-areas:"intro" "form" "more";row-gap:28px}
+  .form-card{padding:24px 18px 20px;border-radius:20px}
+  .ft{grid-template-columns:1fr;gap:20px}
+  footer{padding-bottom:120px}
+  .sp-bar{display:grid;grid-template-columns:60px 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:9px max(12px,env(safe-area-inset-right,0px)) calc(9px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(251,250,246,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s}
+  .sp-bar.show{transform:none}
+  .sp-bar a{display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;border-radius:14px;height:56px}
+  .sp-bar .sub{flex-direction:column;background:var(--white);border:1.5px solid var(--line);color:var(--blue-deep);font-size:10.5px;gap:1px;line-height:1.2}
+  .sp-bar .main{background:var(--cta);color:#fff;gap:10px;box-shadow:0 3px 0 var(--cta-deep);line-height:1.25}
+  .sp-bar .main span{display:flex;flex-direction:column;align-items:center;font-size:16px}
+  .sp-bar .main small{font-size:11px;font-weight:500;opacity:.95}
+}
+@media (max-width:380px){
+  .fv h1{font-size:25px}
+  .fv-points li{font-size:10.5px;padding:9px 4px}
+  .fv-points b{font-size:13.5px}
+  .row2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="sample-bar">このページは架空の塾を想定した制作サンプルです。塾名・人物・料金・実績は架空、写真はAI生成のイメージです。</div>
+
+<header id="hd">
+  <div class="wrap hd">
+    <a class="logo" href="#top" aria-label="ひだまり学習室 トップへ">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#2b5ea7"/><circle cx="20" cy="23" r="7.5" fill="#f5b23a"/><g stroke="#f5b23a" stroke-width="2.2" stroke-linecap="round"><path d="M20 9.5v3M10.5 13.5l2.1 2.1M29.5 13.5l-2.1 2.1M7 23h3M30 23h3"/></g><path d="M8 29h24" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <span class="logo-txt"><small>中学生専門の個別指導</small><b>ひだまり学習室</b></span>
+    </a>
+    <nav class="hd-nav" aria-label="ページ内リンク">
+      <a class="l" href="#feature">指導の特徴</a>
+      <a class="l" href="#schedule">日程</a>
+      <a class="l" href="#price">料金</a>
+      <a class="l" href="#flow">体験の流れ</a>
+      <a class="l" href="#access">アクセス</a>
+      <div class="hd-tel"><small>受付 14:00〜21:00（日曜休み）</small><a class="tel" href="tel:000-0000-0000">000-0000-0000</a></div>
+      <a class="btn btn-cta" href="#entry">無料体験を予約</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== ファーストビュー ===== -->
+<section class="fv">
+  <div class="wrap fv-grid">
+    <div class="fv-copy">
+      <p class="fv-tag"><span>東みどり駅 徒歩4分</span>中学生専門・1対2の個別指導</p>
+      <p class="fv-season">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2b5ea7" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></svg>
+        <b>冬期講習 2026</b><i>中1・中2・中3 受付中</i>
+      </p>
+      <h1>冬休みの10日間で、<br><span class="nw">2学期の<span class="mk">「わからない」</span>を</span><br>総復習しよう。</h1>
+      <p class="fv-lead">講師1人に生徒は2人まで。どこでつまずいたかを一緒に見つけて、その単元から学び直します。部活や家の予定に合わせて、日にちと時間を選べます。</p>
+      <ul class="fv-points">
+        <li><b><em>1</em>対<em>2</em></b>質問しやすい</li>
+        <li><b>日程を選べる</b>全10日から選択</li>
+        <li><b>教材費込み</b>税込の総額表示</li>
+      </ul>
+      <div class="fv-cta">
+        <a class="btn btn-cta" href="#entry"><span class="stack">無料体験を予約する<small>入塾・受講の判断は、体験後で大丈夫です</small></span><span class="arrow"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2l4 4-4 4" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></span></a>
+        <a class="btn btn-ghost" href="#price">先に料金を見る</a>
+      </div>
+      <p class="fv-deadline">冬期講習の申込締切 <b>12月12日（土）</b><span>／各コマ定員4名</span></p>
+    </div>
+
+    <figure class="fv-visual">
+      <div class="fv-photo"><img src="hero.jpg" alt="講師が生徒の隣に座り、ノートを指しながら説明している様子" width="1536" height="1024" fetchpriority="high"></div>
+      <div class="sticky" aria-hidden="true">冬期講習 申込締切<b>12/12</b>（土）まで</div>
+      <figcaption class="fv-voice">
+        <img src="juchou.jpg" alt="塾長の写真" width="1024" height="1536">
+        <div><p class="hand">「どこでつまずいたか」を、<br>まず一緒に見つけましょう。</p><small>塾長　森本 拓也（架空の人物）</small></div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== キー情報 ===== -->
+<section class="key" aria-label="冬期講習の概要">
+  <div class="wrap key-grid">
+    <div class="key-item"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><div><small>期間</small><b>12/24（木）〜1/7（木）</b><span>全10日間・12/31〜1/3はお休み</span></div></div>
+    <div class="key-item"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg><div><small>対象</small><b>中学1〜3年生</b><span>東みどり中・川北中など</span></div></div>
+    <div class="key-item"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 8l3 4 3-4M8.5 13h7M8.5 16h7M12 12v6"/></svg><div><small>料金</small><b>14,300円〜</b><span>税込・教材費込み</span></div></div>
+    <div class="key-item"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg><div><small>申込締切</small><b>12/12（土）まで</b><span>各コマ定員4名</span></div></div>
+  </div>
+</section>
+
+<!-- ===== お悩み ===== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-label">Worries</span><h2>こんなこと、<span class="nw">気になっていませんか？</span></h2></div>
+    <div class="worries">
+      <div class="worry-card parent rv">
+        <h3><span class="worry-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2b5ea7" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="7" r="3.2"/><path d="M3 20c.6-3.6 3-5.6 6-5.6s5.4 2 6 5.6"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.6c2.6.1 4.5 1.8 5 4.6"/></svg></span>保護者の方から</h3>
+        <ul>
+          <li>2学期の成績が下がってきた。冬休みに手を打ちたい</li>
+          <li>家で勉強しているのか、何がわからないのかが見えない</li>
+          <li>人数の多い塾だと、うちの子は質問できないかもしれない</li>
+          <li>体験に行ったら、その場で入塾を決めさせられそうで不安</li>
+        </ul>
+      </div>
+      <div class="worry-card child rv">
+        <h3><span class="worry-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c48a12" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="9" r="4"/><path d="M5 21c.8-4 3.6-6 7-6s6.2 2 7 6"/><path d="M8 5.5l4-2.5 4 2.5"/></svg></span>お子さまから</h3>
+        <ul>
+          <li>数学、どこからわからなくなったのかがわからない</li>
+          <li>授業中に「わかりません」と言うのが恥ずかしい</li>
+          <li>英語の文法がごちゃごちゃになってきた</li>
+          <li>部活があるから、毎日は通えない</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bridge rv">
+      <div class="bridge-arrow" aria-hidden="true"></div>
+      <h3>まずは<span class="mk">「どこでつまずいたか」</span>を<span class="nw">見つけるところから。</span></h3>
+      <p>苦手を残したままだと、3学期の学習でつまずくことがあります。<br class="pc">冬休みは、立ち止まって戻るのにちょうどいい時期です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 指導の特徴 ===== -->
+<section class="sec sky" id="feature">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-label">Feature</span><h2>ひだまり学習室の、<span class="nw">3つの約束</span></h2></div>
+    <div class="features">
+      <div class="feature rv">
+        <div class="feature-img">
+          <div class="mock" role="img" aria-label="さかのぼり診断シートの例。中2数学で、中1の1次方程式から復習が必要と分かった例">
+            <div class="diag">
+              <div class="diag-head"><b>さかのぼり診断シート（例）</b><span>中2・数学</span></div>
+              <ol class="diag-list">
+                <li class="ok"><span class="g">中1</span>正負の数<i>○</i></li>
+                <li class="ok"><span class="g">中1</span>文字と式<i>○</i></li>
+                <li class="ng start"><span class="g">中1</span>1次方程式<em class="hand">ここから！</em><i>△</i></li>
+                <li class="ng"><span class="g">中1</span>比例と反比例<i>△</i></li>
+                <li class="ng"><span class="g">中2</span>連立方程式<i>×</i></li>
+                <li class="na"><span class="g">中2</span>1次関数<i>－</i></li>
+              </ol>
+              <p class="diag-foot hand">→ 講習は「1次方程式」から始めて、<br>連立方程式の文章題まで進めます。</p>
+            </div>
+          </div>
+          <p class="memo hand">中2でも、中1の内容まで戻ってOK。</p>
+        </div>
+        <div>
+          <div class="f-num"><b>01</b>POINT</div>
+          <h3>「さかのぼり診断」で、<br>つまずいた単元から始めます</h3>
+          <p>体験授業のはじめに、20分ほどの確認テストを行います。点数をつけるためではなく、「どの単元から分からなくなったか」を見つけるためのものです。講習では、その単元まで戻って学び直してから、2学期の範囲に進みます。</p>
+          <ul><li>確認テストは無料</li><li>前の学年の内容も扱えます</li><li>学校の教科書に対応</li></ul>
+        </div>
+      </div>
+      <div class="feature rv">
+        <div class="feature-img"><img src="hero.jpg" alt="講師が隣でノートを見ながら説明している様子" loading="lazy" width="1536" height="1024" style="object-position:70% center"><p class="memo hand">説明 → 自分で解く → その場で確認</p></div>
+        <div>
+          <div class="f-num"><b>02</b>POINT</div>
+          <h3>1対2だから、質問しやすく、<br>自分で解く時間もしっかり</h3>
+          <p>講師1人が担当する生徒は2人まで。1人に説明している間、もう1人は演習に取り組み、解き終わったらすぐに丸つけと解説をします。「聞くだけ」で終わらず、自分で解ける状態になるまで進めます。</p>
+          <ul><li>講師1人に生徒2人まで</li><li>1コマ80分</li><li>冬休みの宿題の質問もOK</li></ul>
+        </div>
+      </div>
+      <div class="feature rv">
+        <div class="feature-img">
+          <div class="mock ph" role="img" aria-label="スマートフォンに届く学習レポートの例">
+            <div class="phone" aria-hidden="true">
+              <div class="phone-screen">
+                <div class="ph-top">ひだまり学習室</div>
+                <div class="ph-date">12月25日（金）</div>
+                <div class="bubble"><b>本日の学習レポート（数学）</b><span class="k">今日の内容</span>連立方程式の文章題。「何をxにするか」を決める練習をしました。<span class="k">次回まで</span>ワークp.48 ①〜③（15分ほど）</div>
+                <div class="bubble">手が止まっていた問題も、最後は自分で式を立てられました。</div>
+                <div class="bubble me">ありがとうございます。家でも声をかけてみます！</div>
+              </div>
+            </div>
+          </div>
+          <p class="memo hand">授業のあと、その日のうちにお届け。</p>
+        </div>
+        <div>
+          <div class="f-num"><b>03</b>POINT</div>
+          <h3>毎回の「学習レポート」で、<br>保護者の方に様子をお伝えします</h3>
+          <p>授業のあと、その日に取り組んだ内容と、次回までの課題をLINEまたはメールでお送りします。「塾で何をしているのか分からない」ということがないようにしています。</p>
+          <ul><li>LINEかメールを選べます</li><li>講習中は自習席も無料</li><li>気になることは返信で相談OK</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 日程と時間割 ===== -->
+<section class="sec grid" id="schedule">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-label">Schedule</span><h2>冬期講習の日程と時間割</h2><p>10日間・1日最大5コマ（12/30は3コマ）の中から、通える日と時間を選んで時間割をつくります。</p></div>
+    <div class="sched">
+      <div class="card rv">
+        <h3>2026年12月〜2027年1月<small>青い日が講習日です</small></h3>
+        <table class="cal" aria-label="冬期講習カレンダー">
+          <thead><tr><th class="sun">日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="sat">土</th></tr></thead>
+          <tbody>
+            <tr><td>20</td><td>21</td><td>22</td><td>23</td><td class="on">24<small>開講</small></td><td class="on">25</td><td class="on">26</td></tr>
+            <tr><td class="off">27<small>休み</small></td><td class="on">28</td><td class="on">29</td><td class="on half">30<small>〜17:40</small></td><td class="off">31<small>休み</small></td><td class="off"><span class="m">1月</span>1<small>休み</small></td><td class="off">2<small>休み</small></td></tr>
+            <tr><td class="off">3<small>休み</small></td><td class="on">4</td><td class="on">5</td><td class="on">6</td><td class="on">7<small>最終日</small></td><td>8</td><td>9</td></tr>
+          </tbody>
+        </table>
+        <div class="cal-legend"><span><i style="background:var(--blue)"></i>講習日</span><span><i style="background:#fff;border:1.5px dashed #e6c9c6"></i>お休み</span><span>12/30は③のコマまで</span></div>
+        <div class="terms">
+          <div class="term"><small>前半（6日間）</small><b>12/24（木）〜12/30（水）</b></div>
+          <div class="term"><small>後半（4日間）</small><b>1/4（月）〜1/7（木）</b></div>
+        </div>
+      </div>
+      <div class="card rv">
+        <h3>時間割<small>1コマ80分</small></h3>
+        <ul class="slots">
+          <li><span class="no">1</span><span class="t">13:00 – 14:20</span><span class="tag">午後</span></li>
+          <li><span class="no">2</span><span class="t">14:40 – 16:00</span><span class="tag">午後</span></li>
+          <li><span class="no">3</span><span class="t">16:20 – 17:40</span><span class="tag">部活のあと</span></li>
+          <li><span class="no">4</span><span class="t">18:00 – 19:20</span><span class="tag">部活のあと</span></li>
+          <li><span class="no">5</span><span class="t">19:40 – 21:00</span><span class="tag">夜</span></li>
+        </ul>
+        <p class="sched-note"><b>1日1コマから選べます。</b>部活や家族の予定がある日は、空けたままで大丈夫です。お休みする場合は、前日までにご連絡いただければ、講習期間内の空席のあるコマに振り替えます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 料金 ===== -->
+<section class="sec" id="price">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-label">Price</span><h2>冬期講習のコースと料金</h2><p>表示はすべて<b>税込の総額</b>です。教材費を含み、掲載のコースを受講するのに、このほかの費用はかかりません。</p></div>
+    <div class="courses">
+      <article class="course rv">
+        <span class="grade">中1・中2</span>
+        <h3>1教科集中コース</h3>
+        <p class="what">数学か英語のどちらか1教科を、4コマでじっくり。苦手がはっきりしている人に。</p>
+        <div class="total"><small>合計（税込）</small><b>14,300<span>円</span></b></div>
+        <ul class="breakdown">
+          <li><span>講習費（80分×4コマ）</span><span>13,200円</span></li>
+          <li><span>教材費（講習用プリント）</span><span>1,100円</span></li>
+          <li class="zero"><span>入塾金（講習のみの場合）</span><span>0円</span></li>
+        </ul>
+        <a class="btn btn-cta" href="#entry">体験してから決める</a>
+      </article>
+      <article class="course main rv">
+        <span class="badge">迷ったら、このコース</span>
+        <span class="grade">中1・中2</span>
+        <h3>2学期まるごと総復習</h3>
+        <p class="what">数学と英語を各4コマ。2学期の範囲を、つまずいた単元から総ざらいします。</p>
+        <div class="total"><small>合計（税込）</small><b>28,600<span>円</span></b></div>
+        <ul class="breakdown">
+          <li><span>講習費（80分×8コマ）</span><span>26,400円</span></li>
+          <li><span>教材費（講習用テキスト）</span><span>2,200円</span></li>
+          <li class="zero"><span>入塾金（講習のみの場合）</span><span>0円</span></li>
+        </ul>
+        <a class="btn btn-cta" href="#entry">体験してから決める</a>
+      </article>
+      <article class="course rv">
+        <span class="grade">中3</span>
+        <h3>入試に向けた総点検</h3>
+        <p class="what">5教科から必要な教科を選んで12コマ。入試までに戻るべき単元を洗い出します。</p>
+        <div class="total"><small>合計（税込）</small><b>42,900<span>円</span></b></div>
+        <ul class="breakdown">
+          <li><span>講習費（80分×12コマ）</span><span>39,600円</span></li>
+          <li><span>教材費（入試対策テキスト）</span><span>3,300円</span></li>
+          <li class="zero"><span>入塾金（講習のみの場合）</span><span>0円</span></li>
+        </ul>
+        <a class="btn btn-cta" href="#entry">体験してから決める</a>
+      </article>
+    </div>
+
+    <div class="price-notes">
+      <div class="pn rv"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2b5ea7" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><div><b>コマの追加・教科の追加</b>1コマ3,300円（税込）で追加できます。国語・理科・社会にも対応します。</div></div>
+      <div class="pn rv"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2b5ea7" stroke-width="2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><b>コマ数は体験のあとに相談</b>お子さまの様子によっては、上の表より少ないコマ数をご提案することもあります。</div></div>
+      <div class="pn rv"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2b5ea7" stroke-width="2" aria-hidden="true"><rect x="4" y="6" width="16" height="13" rx="2"/><path d="M4 10h16"/></svg><div><b>お支払い</b>講習開始日までに、銀行振込（手数料はご負担ください）または教室での現金払い。冷暖房費などの諸経費はいただきません。</div></div>
+    </div>
+
+    <details class="regular rv">
+      <summary>入塾後の費用（通常授業・参考）<small>講習のあとも続ける場合</small></summary>
+      <div class="regular-body">
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr><th>学年</th><th>週1回（80分×月4回）</th><th>週2回（80分×月8回）</th></tr></thead>
+            <tbody>
+              <tr><td>中1・中2</td><td class="n">月 13,200円</td><td class="n">月 24,200円</td></tr>
+              <tr><td>中3</td><td class="n">月 15,400円</td><td class="n">月 28,600円</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <table class="tbl" style="margin-top:14px;min-width:0">
+          <tbody>
+            <tr><td>入塾金</td><td class="n">11,000円</td><td>兄弟姉妹で通う場合、2人目からは不要</td></tr>
+            <tr><td>教材費</td><td class="n">8,800〜13,200円</td><td>年1回・学年と教科による。購入前に金額をお知らせします</td></tr>
+            <tr><td>施設維持費</td><td class="n">月 1,100円</td><td>自習席・冷暖房・プリント代を含みます</td></tr>
+            <tr><td>定期テスト対策</td><td class="n">0円</td><td>テスト2週間前の土曜対策授業は追加料金なし</td></tr>
+          </tbody>
+        </table>
+        <p class="note" style="margin-top:10px">※ 金額はすべて税込です。毎月のお支払いは「授業料＋施設維持費」です（例：中1・中2の週1回なら月14,300円）。夏期・冬期・春期講習は希望制で、受講しなくても通常授業は続けられます。</p>
+        <p class="legal">冬期講習は受講期間が2か月以内の講座です。入塾後の通常授業で、契約期間が2か月を超え、かつ総額が5万円を超える場合は、特定商取引法の「特定継続的役務提供」にあたります。その場合は、契約前に概要書面、契約時に契約書面をお渡ししてご説明します。クーリング・オフ（契約書面の受領から8日間）と中途解約ができ、解約時の精算方法も書面に記載します。</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 講師紹介 ===== -->
+<section class="sec sky" id="teacher">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-label">Teacher</span><h2>教えるのは、この2人です</h2><p>小さな塾なので、教科ごとにこの2人のどちらかが担当します。体験で担当した講師が、そのまま講習も受け持ちます。</p></div>
+    <div class="teachers">
+      <article class="t-card rv">
+        <div class="t-photo"><img src="juchou.jpg" alt="塾長 森本拓也の写真" loading="lazy" width="1024" height="1536"><span class="fic">架空の人物・AI生成</span></div>
+        <div class="t-body">
+          <span class="t-role">塾長／数学・理科・社会</span>
+          <h3 class="t-name">森本 拓也<small>もりもと たくや</small></h3>
+          <p class="t-quote">「わかりません」と言えた日が、伸びはじめる日だと思っています。</p>
+          <p>個別指導塾の教室長を12年務めたあと、2019年にこの教室を開きました。中学生のつまずきは、多くの場合「前の学年のどこか」にあります。焦らず、でも冬休みのうちに、そこまで一緒に戻りましょう。</p>
+          <dl class="t-prof">
+            <dt>指導歴</dt><dd>19年（個別指導一筋）</dd>
+            <dt>大切にしていること</dt><dd>答えより先に「どこで迷ったか」を聞くこと</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="t-card sub rv">
+        <div class="t-photo"><img src="koushi.jpg" alt="講師 佐伯なつみの写真" loading="lazy" width="1024" height="1536"><span class="fic">架空の人物・AI生成</span></div>
+        <div class="t-body">
+          <span class="t-role">専任講師／英語・国語</span>
+          <h3 class="t-name">佐伯 なつみ<small>さえき なつみ</small></h3>
+          <p class="t-quote">文法は「なぜそうなるか」が分かると、ぐっと楽になります。</p>
+          <p>英語教材の編集の仕事を経て、2021年から当塾の専任講師に。例文を一緒に声に出して読むところから始めます。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 体験・講習の流れ ===== -->
+<section class="sec" id="flow">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-label">Flow</span><h2>体験から講習までの流れ</h2><p>体験授業は無料です。所要時間は、体験と相談をあわせて約100分です。</p></div>
+    <div class="flow">
+      <div class="step rv">
+        <div class="ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2b5ea7" stroke-width="1.6" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg></div>
+        <h3>WEBで予約</h3><span class="time">約1分</span>
+        <p>学年・希望日・ご連絡先を入力するだけ。お電話でも受け付けます。</p>
+      </div>
+      <div class="step rv">
+        <div class="ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2b5ea7" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div>
+        <h3>日時の確認</h3><span class="time">5分ほど</span>
+        <p>塾長からご連絡し、日時と気になる教科、部活の予定などを伺います。</p>
+      </div>
+      <div class="step rv">
+        <div class="ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2b5ea7" stroke-width="1.6" aria-hidden="true"><path d="M4 5h7a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4zM20 5h-5a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h5z"/></svg></div>
+        <h3>体験授業＋さかのぼり診断</h3><span class="time">80分</span>
+        <p>確認テスト（約20分）でつまずきを見つけ、続けて授業を約60分体験します。</p>
+      </div>
+      <div class="step rv">
+        <div class="ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2b5ea7" stroke-width="1.6" aria-hidden="true"><path d="M4 5h12v9H9l-4 3v-3H4z"/><path d="M16 9h4v8h-1v3l-3.5-3H11v-3"/></svg></div>
+        <h3>学習相談</h3><span class="time">20分</span>
+        <p>保護者の方もご一緒に。診断の結果と、講習で取り組む単元・コマ数の案をお伝えします。</p>
+      </div>
+      <div class="step key-step rv">
+        <div class="ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#e09a12" stroke-width="1.8" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>ご家庭で検討</h3><span class="time">締切は12/12</span>
+        <p>お子さまと相談してから決めてください。お申込みはWEBかお電話で。</p>
+      </div>
+    </div>
+
+    <div class="promise rv">
+      <div class="promise-ico"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2b5ea7" stroke-width="1.8" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+      <div>
+        <h3>体験の当日に、入塾や講習の申込みを決めていただく必要はありません。</h3>
+        <p>体験後にこちらから何度もお電話することもありません。体験だけで終わっても、もちろん大丈夫です。</p>
+      </div>
+    </div>
+    <p class="bring rv"><b>持ち物：</b><span>筆記用具</span><span>学校の教科書・ワーク</span><span>最近のテスト（あれば）</span></p>
+  </div>
+</section>
+
+<!-- ===== 教室の様子 ===== -->
+<section class="sec sky">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-label">Classroom</span><h2>教室の様子</h2><p>駅から歩いて4分。明るく、静かに集中できる小さな教室です。</p></div>
+    <div class="gallery rv">
+      <figure><img src="classroom.jpg" alt="仕切りのある机が並ぶ、明るい教室" loading="lazy" width="1536" height="1024"><figcaption><b>授業スペース</b>仕切り付きの机で、隣を気にせず集中できます。</figcaption></figure>
+      <figure><img src="jishu.jpg" alt="窓際の自習スペース" loading="lazy" width="1536" height="1024"><figcaption><b>自習席（12席）</b>講習期間中は無料</figcaption></figure>
+      <figure><img src="notebook.jpg" alt="ノートと参考書の手元" loading="lazy" width="1240" height="874"><figcaption><b>オリジナルのプリント</b>単元ごとに用意</figcaption></figure>
+    </div>
+    <div class="room-facts">
+      <div class="rf rv"><b>生徒 約30名</b>中学生だけが通う教室</div>
+      <div class="rf rv"><b>講師2名</b>体験から同じ講師が担当</div>
+      <div class="rf rv"><b>自習席12席</b>講習中 12:40〜21:20</div>
+      <div class="rf rv"><b>入退室メール</b>到着と帰宅時にお知らせ</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 声 ===== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-label">Voice</span><h2>サンプルの声（架空）</h2><p>実際の制作では、ご本人・保護者の方から掲載の許可をいただいた声だけを載せます。</p></div>
+    <div class="voices">
+      <article class="voice rv">
+        <div class="voice-who"><div class="voice-ava p">保</div><div><b>中2の保護者の方</b><small>昨年の冬期講習から通塾（架空）</small></div></div>
+        <p>体験のあと、その場で申込みを迫られることがなく、家で子どもと話してから決められたのがよかったです。毎回届く学習レポートで、何をやったのかが分かるので安心しています。</p>
+        <p class="voice-dis">※ 制作サンプル用の架空の声です。感じ方には個人差があります。</p>
+      </article>
+      <article class="voice rv">
+        <div class="voice-who"><div class="voice-ava s">中</div><div><b>中3の生徒</b><small>中2の冬から通塾（架空）</small></div></div>
+        <p>前の塾では質問できなかったけど、ここは先生が隣にいるので聞きやすいです。数学は中1の方程式まで戻ってやり直したら、文章題の式が立てられるようになってきました。</p>
+        <p class="voice-dis">※ 制作サンプル用の架空の声です。結果には個人差があります。</p>
+      </article>
+    </div>
+    <div class="results-memo rv"><b>合格実績について：</b>このサンプルでは合格実績を掲載していません。実際に掲載する場合は、年度・実人数か延べ人数か・集計の基準（例：受験直前6か月以内に在籍し、30時間以上受講した生徒のみ）を必ず併記し、講習のみの受講生や他教室の合格者は含めません。</div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec sky">
+  <div class="wrap narrow">
+    <div class="sec-head rv"><span class="sec-label">FAQ</span><h2>よくあるご質問</h2></div>
+    <div class="faq rv">
+      <details open><summary>冬期講習だけの受講はできますか？</summary><p class="a">はい、できます。講習のみの場合、入塾金はかかりません。講習後に通常授業を続けるかどうかは、ご家庭で決めていただければ大丈夫です。</p></details>
+      <details><summary>部活が忙しくても通えますか？</summary><p class="a">通えます。1日1コマから選べ、夕方以降のコマ（16:20〜、18:00〜、19:40〜）もあります。練習や試合の予定が決まっていない日は、空けておいて、空席があれば後から入れることもできます。</p></details>
+      <details><summary>休んだ場合はどうなりますか？</summary><p class="a">前日までにご連絡いただければ、講習期間内の空席のあるコマに振り替えます（満席で振り替えられない場合は、そのコマの講習費をお返しします）。当日の体調不良の場合も、まずはご相談ください。</p></details>
+      <details><summary>申し込んだあとに、キャンセルはできますか？</summary><p class="a">講習開始日の前日までにご連絡いただければ、全額をお返しします。開始後にやめる場合は、受講していないコマの講習費をお返しします（お渡し済みの教材費を除きます）。教室の都合で休講した場合は、振替か返金のどちらかをお選びいただけます。</p></details>
+      <details><summary>学校の冬休みの宿題も見てもらえますか？</summary><p class="a">授業の終わりや自習の時間に、宿題の質問をしていただけます。授業そのものは、さかのぼり診断で見つけた単元を中心に進めます。</p></details>
+      <details><summary>成績保証はありますか？</summary><p class="a">行っていません。成績はお子さまの状況や取り組む時間によって変わるため、「必ず上がる」とはお約束できません。そのかわり、毎回の学習レポートで、何ができるようになったかを具体的にお伝えします。</p></details>
+      <details><summary>兄弟姉妹の割引はありますか？</summary><p class="a">入塾後の通常授業では、2人目からの入塾金が不要です。冬期講習のみの場合は、もともと入塾金はかかりません。</p></details>
+      <details><summary>自転車で通えますか？送迎の車は停められますか？</summary><p class="a">教室の横に駐輪場（10台）があります。駐車場はありませんが、教室前の送迎スペースに短時間の停車ができます（授業の前後は混み合うことがあります）。</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== アクセス ===== -->
+<section class="sec" id="access">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="sec-label">Access</span><h2>アクセス</h2></div>
+    <div class="access">
+      <div class="map rv">
+        <svg viewBox="0 0 560 380" role="img" aria-label="東みどり駅北口から教室までの簡易地図（イメージ）">
+          <rect width="560" height="380" fill="#f4f1e8"/>
+          <g fill="#e6e1d3"><rect x="30" y="30" width="150" height="110" rx="8"/><rect x="220" y="30" width="130" height="110" rx="8"/><rect x="390" y="30" width="140" height="110" rx="8"/><rect x="30" y="190" width="150" height="80" rx="8"/><rect x="390" y="190" width="140" height="80" rx="8"/></g>
+          <rect x="220" y="190" width="130" height="80" rx="8" fill="#dfe9d6"/>
+          <text x="285" y="236" font-size="13" fill="#6c8a5c" text-anchor="middle" font-family="Zen Kaku Gothic New, sans-serif">みどり公園</text>
+          <g stroke="#fff" stroke-width="22" stroke-linecap="round"><path d="M0 165H560"/><path d="M200 0V380"/><path d="M370 0V300"/></g>
+          <rect x="0" y="300" width="560" height="80" fill="#dbe3ee"/>
+          <g stroke="#8a97ab" stroke-width="4"><path d="M0 330H560"/></g>
+          <g stroke="#dbe3ee" stroke-width="3"><path d="M10 330h20M50 330h20M90 330h20M130 330h20M170 330h20M210 330h20M250 330h20M290 330h20M330 330h20M370 330h20M410 330h20M450 330h20M490 330h20M530 330h20"/></g>
+          <rect x="150" y="312" width="110" height="36" rx="8" fill="#2b5ea7"/>
+          <text x="205" y="335" font-size="13" fill="#fff" text-anchor="middle" font-weight="700" font-family="Zen Kaku Gothic New, sans-serif">東みどり駅</text>
+          <text x="232" y="296" font-size="11.5" fill="#586477" text-anchor="middle" font-family="Zen Kaku Gothic New, sans-serif">北口</text>
+          <path d="M205 286V165H370V120" fill="none" stroke="#e4570f" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round"/>
+          <rect x="232" y="98" width="62" height="30" rx="6" fill="#fff" stroke="#c9d3e0"/>
+          <text x="263" y="118" font-size="11" fill="#586477" text-anchor="middle" font-family="Zen Kaku Gothic New, sans-serif">コンビニ</text>
+          <g transform="translate(370 104)"><path d="M0 0c-14 0-24-10-24-23S-13-46 0-46s24 10 24 23S14 0 0 0Z" transform="translate(0 0)" fill="#2b5ea7"/><circle cx="0" cy="-24" r="9" fill="#f5b23a"/></g>
+          <rect x="396" y="62" width="128" height="40" rx="10" fill="#fff" stroke="#2b5ea7" stroke-width="2"/>
+          <text x="460" y="87" font-size="13" fill="#1b3a68" text-anchor="middle" font-weight="700" font-family="Zen Kaku Gothic New, sans-serif">ひだまり学習室</text>
+          <text x="282" y="157" font-size="11" fill="#c24808" text-anchor="middle" font-family="Zen Kaku Gothic New, sans-serif">徒歩4分</text>
+        </svg>
+      </div>
+      <div class="rv">
+        <dl class="info">
+          <dt>住所</dt><dd>みどり市東みどり町2-8-5 ひなたビル2階（架空）</dd>
+          <dt>最寄り駅</dt><dd>東みどり駅 北口から徒歩4分<small>北口から直進し、最初の交差点を右へ。次の角を左に曲がってすぐです（角の手前にコンビニがあります）</small></dd>
+          <dt>開室時間</dt><dd>平日 14:00〜22:00／土曜 10:00〜18:00<small>冬期講習期間中は 12:40〜21:20</small></dd>
+          <dt>休室日</dt><dd>日曜・祝日<small>冬期は 12/27、12/31〜1/3</small></dd>
+          <dt>駐輪場</dt><dd>あり（10台）</dd>
+          <dt>駐車場</dt><dd>なし<small>教室前に送迎用の短時間停車スペースあり</small></dd>
+          <dt>お電話</dt><dd><a class="tel" href="tel:000-0000-0000" style="font-size:19px;color:var(--blue-deep)">000-0000-0000</a><small>受付 14:00〜21:00。授業中は出られないことがあり、折り返しご連絡します</small></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 申込フォーム ===== -->
+<section class="sec entry" id="entry">
+  <div class="wrap entry-grid">
+    <div class="entry-intro rv">
+      <span class="sec-label">Entry</span>
+      <h2>まずは、無料体験から。</h2>
+      <p class="entry-lead">入力は3ステップ・約1分です。いただいた内容をもとに、塾長から日時の確認のご連絡をします。</p>
+    </div>
+    <div class="entry-more rv">
+      <ul class="entry-list">
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffe270" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><b>体験授業・さかのぼり診断は無料</b>体験と学習相談で約100分です。</div></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffe270" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><b>当日に決めなくて大丈夫です</b>ご家庭で相談してから、12/12までにお知らせください。</div></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffe270" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><div><b>学校名や成績の入力は不要です</b>必要なことは、体験の日に直接伺います。</div></li>
+      </ul>
+      <p class="entry-tel">お電話でも受け付けています<br><a class="tel" href="tel:000-0000-0000">000-0000-0000</a><br><small>受付 14:00〜21:00（日曜休み）</small></p>
+    </div>
+
+    <div class="form-card rv" aria-live="polite">
+      <div class="form-head"><b>無料体験の予約</b><small id="stepLabel">STEP 1 / 3</small></div>
+      <p class="form-sample">制作サンプルのため、入力しても送信されません。実際の個人情報は入力しないでください。</p>
+      <div class="steps-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+      <form id="entryForm" novalidate>
+        <div class="q on" data-q="1">
+          <h3>お子さまの学年を選んでください<em class="req">必須</em></h3>
+          <p class="hint">選ぶと次に進みます。</p>
+          <div class="opts" role="group" aria-label="お子さまの学年">
+            <button type="button" class="opt" data-v="中学1年生">中学1年生<small>1教科集中・総復習</small></button>
+            <button type="button" class="opt" data-v="中学2年生">中学2年生<small>1教科集中・総復習</small></button>
+            <button type="button" class="opt" data-v="中学3年生">中学3年生<small>入試に向けた総点検</small></button>
+          </div>
+        </div>
+
+        <div class="q" data-q="2">
+          <h3>体験授業の希望日</h3>
+          <p class="hint">第1希望だけで大丈夫です。日時は、ご希望の連絡方法で後ほど調整します。</p>
+          <div class="row2">
+            <div class="field"><label for="f-date">希望日<em class="req">必須</em></label><select id="f-date" name="date"><option value="">選んでください</option></select><span class="err" id="e-date"></span></div>
+            <div class="field"><label for="f-time">時間帯<em class="opt-tag">任意</em></label><select id="f-time" name="time"><option value="">どれでも</option><option>平日 16:20〜</option><option>平日 18:00〜</option><option>平日 19:40〜</option><option>土曜 10:00〜</option><option>土曜 13:00〜</option><option>土曜 15:30〜</option></select></div>
+          </div>
+          <div class="field">
+            <span class="lbl">気になる教科<em class="opt-tag">任意・複数可</em></span>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="subj" value="数学"><span>数学</span></label>
+              <label class="chip"><input type="checkbox" name="subj" value="英語"><span>英語</span></label>
+              <label class="chip"><input type="checkbox" name="subj" value="国語"><span>国語</span></label>
+              <label class="chip"><input type="checkbox" name="subj" value="理科"><span>理科</span></label>
+              <label class="chip"><input type="checkbox" name="subj" value="社会"><span>社会</span></label>
+            </div>
+          </div>
+          <button type="button" class="btn btn-next" id="toStep3">次へ進む</button>
+        </div>
+
+        <div class="q" data-q="3">
+          <h3>保護者の方のお名前とご連絡先</h3>
+          <div class="field"><label for="f-name">保護者のお名前<em class="req">必須</em></label><input type="text" id="f-name" name="name" autocomplete="name" placeholder="例）山田 花子"><span class="err" id="e-name"></span></div>
+          <div class="field">
+            <span class="lbl" id="l-how">ご連絡の方法<em class="req">必須</em></span>
+            <div class="seg" role="radiogroup" aria-labelledby="l-how">
+              <label><input type="radio" name="how" value="mail" checked><span>メール</span></label>
+              <label><input type="radio" name="how" value="tel"><span>電話</span></label>
+            </div>
+          </div>
+          <div class="field"><label for="f-contact" id="l-contact">メールアドレス<em class="req">必須</em></label><input type="email" id="f-contact" name="contact" autocomplete="email" inputmode="email" placeholder="例）hanako@example.com"><span class="err" id="e-contact"></span></div>
+          <div class="field"><label for="f-msg">ご質問など<em class="opt-tag">任意</em></label><textarea id="f-msg" name="message" placeholder="例）部活が土曜にあります。中1の内容から不安です。"></textarea></div>
+          <button type="submit" class="btn btn-cta"><span class="stack">無料体験を予約する<small>入塾の判断は体験後で大丈夫です</small></span></button>
+          <p class="agree">2営業日以内に、ご希望の連絡方法で塾長からご連絡します。日時が決まった時点で予約確定です。ご入力いただいた情報は、体験授業・講習のご案内とご連絡にのみ使用します（<a href="#privacy">個人情報の取り扱い</a>）。</p>
+        </div>
+
+        <div class="q" data-q="done">
+          <div class="done">
+            <svg width="58" height="58" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="#eef4fb"/><path d="M17 29l7 7 15-16" fill="none" stroke="#2b5ea7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>ご予約内容（表示例）</h3>
+            <p class="sample-alert" role="status">サンプルのため送信されません</p>
+            <dl class="summary" id="summary"></dl>
+            <p>実際の運用では、この内容が教室に届き、2営業日以内に塾長から日時確認のご連絡をします。</p>
+            <button type="button" class="reset" id="reset">最初から入力し直す</button>
+          </div>
+        </div>
+
+        <div class="form-foot"><button type="button" class="back" id="back" hidden>← 戻る</button><span class="note" id="foot-note">所要時間 約1分</span></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <b class="ft-name">中学生専門の個別指導 ひだまり学習室</b>
+        みどり市東みどり町2-8-5 ひなたビル2階（架空）<br>
+        TEL 000-0000-0000（受付 14:00〜21:00・日曜休み）<br>
+        運営：ひだまり学習室 代表 森本 拓也（架空）
+      </div>
+      <div id="privacy">
+        <h4>個人情報の取り扱い</h4>
+        お預かりした個人情報は、体験授業・講習のご案内とご連絡のためにのみ使用し、法令に基づく場合を除き、ご本人の同意なく第三者に提供しません。お問い合わせ・削除のご依頼は上記の電話番号までご連絡ください。
+      </div>
+    </div>
+    <p class="ft-disc"><strong>このページは架空の塾を想定した制作サンプルです。塾名・人物・料金・実績は架空、写真はAI生成のイメージです。</strong><br>実際の制作では、教室の実写真と、実際の料金・日程・掲載許可を得た声を使用します。フォームは送信されません。</p>
+  </div>
+</footer>
+
+<nav class="sp-bar" id="spbar" aria-label="お申込み">
+  <a class="sub" href="tel:000-0000-0000"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>電話</a>
+  <a class="main" href="#entry"><span>無料体験を予約する<small>冬期講習の締切 12/12（土）</small></span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M4 2l4 4-4 4" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></a>
+</nav>
+
+<script>
+(function(){
+  // スクロールで要素をふわっと表示
+  document.documentElement.classList.add('js');
+  var rvs = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    rvs.forEach(function(el){ io.observe(el); });
+  } else { rvs.forEach(function(el){ el.classList.add('in'); }); }
+  // 念のため：IntersectionObserverが反応しない環境でも、画面内に入った要素は必ず表示する
+  function revealVisible(){ document.querySelectorAll('.rv:not(.in)').forEach(function(el){ if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in'); }); }
+  window.addEventListener('scroll', function(){ clearTimeout(revealVisible.t); revealVisible.t = setTimeout(revealVisible, 120); }, { passive: true });
+  setTimeout(revealVisible, 1200);
+
+  // ヘッダーの境界線・スマホ固定バー（申込フォームが見えている間は隠す）
+  var hd = document.getElementById('hd'), bar = document.getElementById('spbar'), entry = document.getElementById('entry');
+  var entryVisible = false;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(es){ entryVisible = es[0].isIntersecting; onScroll(); }, { threshold: 0.15 }).observe(entry);
+  }
+  function onScroll(){
+    var y = window.scrollY;
+    hd.classList.toggle('scrolled', y > 8);
+    bar.classList.toggle('show', y > window.innerHeight * 0.7 && !entryVisible);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ===== 申込フォーム（3ステップ・送信しない見本） =====
+  var form = document.getElementById('entryForm');
+  var qs = Array.prototype.slice.call(form.querySelectorAll('.q'));
+  var dots = document.querySelectorAll('.steps-dots i');
+  var label = document.getElementById('stepLabel');
+  var back = document.getElementById('back');
+  var footNote = document.getElementById('foot-note');
+  var step = 1, data = {};
+
+  // 体験の希望日：明日から、日曜・祝日・休室日を除いて12日分
+  var sel = document.getElementById('f-date');
+  var wd = ['日','月','火','水','木','金','土'];
+  var closed = ['2026-11-03','2026-11-23','2026-12-27','2026-12-31','2027-01-01','2027-01-02','2027-01-03','2027-01-11','2027-02-11','2027-02-23'];
+  var d = new Date(); d.setHours(12,0,0,0);
+  for (var n = 0, guard = 0; n < 12 && guard < 60; guard++) {
+    d.setDate(d.getDate() + 1);
+    var key = d.getFullYear() + '-' + ('0' + (d.getMonth()+1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+    if (d.getDay() === 0 || closed.indexOf(key) > -1) continue;
+    var t = (d.getMonth()+1) + '月' + d.getDate() + '日（' + wd[d.getDay()] + '）';
+    var o = document.createElement('option'); o.value = t; o.textContent = t; sel.appendChild(o); n++;
+  }
+
+  function show(s){
+    qs.forEach(function(q){ q.classList.toggle('on', q.dataset.q === String(s)); });
+    var done = s === 'done';
+    for (var i = 0; i < dots.length; i++) dots[i].classList.toggle('on', done || i < s);
+    label.textContent = done ? '完了' : 'STEP ' + s + ' / 3';
+    back.hidden = done || s === 1;
+    footNote.hidden = done;
+    step = s;
+  }
+
+  form.addEventListener('click', function(e){
+    var opt = e.target.closest('.opt');
+    if (!opt) return;
+    form.querySelectorAll('.opt').forEach(function(b){ b.classList.remove('sel'); });
+    opt.classList.add('sel');
+    data.grade = opt.dataset.v;
+    show(2);
+    sel.focus();
+  });
+
+  document.getElementById('toStep3').addEventListener('click', function(){
+    var err = document.getElementById('e-date');
+    if (!sel.value) { err.textContent = '体験の希望日を選んでください'; sel.focus(); return; }
+    err.textContent = '';
+    show(3);
+    document.getElementById('f-name').focus();
+  });
+  sel.addEventListener('change', function(){ if (sel.value) document.getElementById('e-date').textContent = ''; });
+
+  back.addEventListener('click', function(){ if (typeof step === 'number' && step > 1) show(step - 1); });
+
+  // 連絡方法でラベルと入力形式を切り替え
+  var contact = document.getElementById('f-contact'), lc = document.getElementById('l-contact');
+  form.querySelectorAll('input[name=how]').forEach(function(r){
+    r.addEventListener('change', function(){
+      var tel = r.value === 'tel' && r.checked;
+      if (!r.checked) return;
+      contact.type = tel ? 'tel' : 'email';
+      contact.inputMode = tel ? 'tel' : 'email';
+      contact.autocomplete = tel ? 'tel' : 'email';
+      contact.placeholder = tel ? '例）090-1234-5678' : '例）hanako@example.com';
+      lc.innerHTML = (tel ? '電話番号' : 'メールアドレス') + '<em class="req">必須</em>';
+      document.getElementById('e-contact').textContent = '';
+    });
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name'), eName = document.getElementById('e-name'), eC = document.getElementById('e-contact');
+    var how = form.querySelector('input[name=how]:checked').value;
+    var v = contact.value.trim(), ok = true;
+    if (!name.value.trim()) { eName.textContent = 'お名前を入力してください'; ok = false; } else eName.textContent = '';
+    var cOk = how === 'mail' ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) : /^[0-9０-９\-－ ]{10,14}$/.test(v);
+    eC.textContent = cOk ? '' : (how === 'mail' ? 'メールアドレスの形式をご確認ください（例：hanako@example.com）' : '電話番号をご確認ください（例：090-1234-5678）');
+    if (!cOk) ok = false;
+    if (!ok) { (name.value.trim() ? contact : name).focus(); return; }
+
+    var subj = Array.prototype.map.call(form.querySelectorAll('input[name=subj]:checked'), function(c){ return c.value; }).join('・');
+    var rows = [
+      ['学年', data.grade || ''],
+      ['希望日', sel.value + (document.getElementById('f-time').value ? ' ' + document.getElementById('f-time').value : '')],
+      ['教科', subj || '指定なし'],
+      ['お名前', name.value.trim()],
+      [how === 'mail' ? 'メール' : '電話', v]
+    ];
+    var dl = document.getElementById('summary'); dl.textContent = '';
+    rows.forEach(function(r){
+      var dt = document.createElement('dt'); dt.textContent = r[0];
+      var dd = document.createElement('dd'); dd.textContent = r[1];
+      dl.appendChild(dt); dl.appendChild(dd);
+    });
+    show('done');
+  });
+
+  document.getElementById('reset').addEventListener('click', function(){
+    form.reset();
+    form.querySelectorAll('.opt').forEach(function(b){ b.classList.remove('sel'); });
+    contact.type = 'email'; contact.placeholder = '例）hanako@example.com';
+    lc.innerHTML = 'メールアドレス<em class="req">必須</em>';
+    data = {};
+    show(1);
+  });
+
+  show(1);
+})();
+</script>
+</body>
+</html>
